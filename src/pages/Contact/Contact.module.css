@@ -1,0 +1,41 @@
+.section {
+    padding-bottom: 3em;
+}
+
+.logoImage {
+    width: 70px !important;
+    height: 70px !important;
+    fill: var(--primary) !important;
+}
+
+.logoContainer {
+    width: 120px;
+    height: 120px;
+    background: var(--transparent-grey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, background 0.1s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.logoContainer:hover {
+    background: var(--light);
+    transform: scale(1.1);
+}
+
+@media (max-width: 767.98px) {
+    .logoContainer {
+        width: 90px;
+        height: 90px;
+    }
+
+    .logoImage {
+        width: 55px !important;
+        height: 55px !important;
+    }
+}

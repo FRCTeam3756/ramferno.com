@@ -1,0 +1,83 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    pointer-events: none;
+}
+
+.navbarItems {
+    pointer-events: auto;
+
+    color: white;
+    background-color: black;
+    border: 1px solid var(--primary);
+
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    margin: 0 auto;
+    gap: 2rem;
+
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbarItem {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbarItem a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbarItem a:hover p,
+.navbarItem a:hover .icon {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.navbarItem p {
+    font-size: var(--font-size-m);
+    transition: color 0.3s ease;
+}
+
+.icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 767.78px) {
+    .navbarItem p {
+        display: none;
+        transition: all 1s linear;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbarItem .icon {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .navbarItem p {
+        display: none;
+        transition: all 1s linear;
+    }
+
+    .navbarItem .icon {
+        display: block;
+    }
+}

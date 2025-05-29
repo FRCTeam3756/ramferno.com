@@ -1,0 +1,192 @@
+@import url('../../styles/constants.module.css');
+
+.heroBackground {
+  filter: hue-rotate(0deg);
+  background-image: 
+    linear-gradient(to right, rgba(90, 0, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 0, 255, 0.18) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-repeat: repeat;
+  background-position: 0% 0%, 0% 0%;
+  
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 0%, transparent 100%);
+  mask-composite: intersect;
+
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profileImg {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mainText {
+    position: relative;
+    z-index: 1;
+    justify-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainText h1 {
+    color: var(--light);
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.mainText h1 span {
+    color: var(--white);
+}
+
+.mainText h2 {
+    font-weight: 700;
+    margin: 0;
+
+    background: linear-gradient(180deg, #fff, var(--primary) 80%);
+
+    background-clip: text;
+    color: transparent;
+}
+
+.mainText h3 {
+    font-size: 1.5em;
+    color: var(--white);
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem
+}
+
+.links {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links::before,
+.links::after {
+  content: "";
+  flex-basis: 300px;
+  height: 2px;
+  background-color: var(--light);
+  opacity: 0.2;
+  margin: 0 20px;
+}
+
+@media (max-width: 767.98px) {
+    .mainText h1 {
+        font-size: clamp(2.4rem, 7vw, 3.5rem);
+    }
+
+    .mainText h2 {
+        font-size: clamp(3.6rem, 13vw, 10.4rem);
+    }
+
+    .mainText h3 {
+        font-size: clamp(0.6rem, 3vw, 1.3rem);
+    }
+
+    .profileImg {
+        display: none;
+    }
+
+    .mainText {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .mainText h1 {
+        font-size: 3.3rem;
+    }
+
+    .mainText h2 {
+        font-size: 6rem;
+    }
+
+    .mainText h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .mainText h1 {
+        font-size: clamp(3.5rem, 5vw, 10rem);
+    }
+
+    .mainText h2 {
+        font-size: clamp(7.4rem, 10vw, 50rem);
+    }
+
+    .mainText h3 {
+        font-size: clamp(1.4rem, 2vw, 2.3rem);
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .mainText {
+    padding: 0 1rem;
+  }
+
+  .mainText h1 {
+    font-size: 1.6rem;
+  }
+
+  .mainText h2 {
+    font-size: 2.4rem;
+  }
+
+  .mainText h3 {
+    font-size: 1rem;
+  }
+
+  .links {
+    position: relative;
+    bottom: auto;
+    margin-top: 2rem;
+  }
+
+  .links::before,
+  .links::after {
+    flex-basis: 100px;
+  }
+}

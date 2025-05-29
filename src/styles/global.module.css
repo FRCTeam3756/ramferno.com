@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('./constants.module.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+  transition: .3s all ease;
+}
+
+a:hover {
+  color: var(--light);
+}
+
+button:focus {
+  outline: 1px dotted;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: visible;
+}
+
+nav {
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--black);
+  line-height: 1.8;
+  color: var(--grey);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sectionHeader h1,
+.sectionHeader h2 {
+  margin: 0.5rem 0;
+}
+
+.sectionHeader h1 {
+  position: absolute;
+  top: 0px;
+  color: var(--transparent-grey);
+  z-index: -1;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.sectionHeader h2 {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Phone (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+  .sectionHeader h1 {
+    font-size: 3rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 2.4rem;
+  }
+}
+
+.section {
+  padding: 7em 0;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding: 6em 0;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 75vw;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
