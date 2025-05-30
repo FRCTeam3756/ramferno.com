@@ -24,9 +24,7 @@ export const Code = () => {
   return (
     <section className={globalStyles.section} id="code">
       <div className={globalStyles.container}>
-        <header
-          className={globalStyles.sectionHeader}
-        >
+        <header className={globalStyles.sectionHeader}>
           <h1>Codebases</h1>
           <h2>Codebases</h2>
         </header>

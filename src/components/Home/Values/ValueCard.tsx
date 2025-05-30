@@ -1,4 +1,4 @@
-import styles from './Values.module.css';
+import valueStyles from "./Values.module.css";
 
 interface ValueCardProps {
   title: string;
@@ -6,12 +6,13 @@ interface ValueCardProps {
   image: string;
 }
 
-const ValueCard = ({ title, description, image }: ValueCardProps) => (
-  <div className={styles.card}>
-    <img className={styles.image} src={image}></img>
-    <h3 className={styles.title}>{title}</h3>
-    <p className={styles.description}>{description}</p>
+export const ValueCard = ({ title, description, image }: ValueCardProps) => (
+  <div className={valueStyles.card}>
+    <img className={valueStyles.cardImage} src={image}></img>
+    <div className={valueStyles.cardText}>
+      <span className={valueStyles.cardTitle}>{title}</span>
+      {/* <br/> */}
+      <span className={valueStyles.cardDescription}>{description}</span>
+    </div>
   </div>
 );
-
-export default ValueCard;

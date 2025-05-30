@@ -25,3 +25,9 @@
   color: #555;
   line-height: 1.6;
 }
+
+.teamContent p {
+  color: white;
+  text-align: center;
+  font-size: 17px;
+}

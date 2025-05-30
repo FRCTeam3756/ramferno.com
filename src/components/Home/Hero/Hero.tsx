@@ -1,5 +1,5 @@
 import heroStyles from "./Hero.module.css";
-import global from "../../../styles/global.module.css";
+import globalStyles from "../../../styles/global.module.css";
 
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -12,7 +12,7 @@ export const Hero = () => {
     <section className={heroStyles.hero} id="home">
       <div className={heroStyles.heroBackground} />
       <div className={heroStyles.heroFade} />
-      <div className={global.container}>
+      <div className={globalStyles.container}>
         <div className={heroStyles.leftText}>
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
