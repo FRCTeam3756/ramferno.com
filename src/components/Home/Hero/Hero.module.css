@@ -1,0 +1,105 @@
+@import url('../../../styles/constants.module.css');
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  filter: brightness(0.5);
+
+  background-image: url('../../../assets/images/hero/background.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.heroBackground::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7.5%;
+  background: linear-gradient(to bottom, transparent, black);
+  pointer-events: none;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.profileImg {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.leftText {
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+  z-index: 1;
+  text-align: left;
+}
+
+.leftText h1 {
+  background: linear-gradient(180deg, #fff, var(--primary) 80%);
+  background-clip: text;
+  color: transparent;
+
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.rightText {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  text-align: right;
+}
+
+.links {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links::before,
+.links::after {
+  content: "";
+  flex-basis: 300px;
+  height: 2px;
+  background-color: var(--light);
+  opacity: 0.2;
+  margin: 0 20px;
+}

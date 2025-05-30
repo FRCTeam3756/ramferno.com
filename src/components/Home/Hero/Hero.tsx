@@ -1,5 +1,5 @@
-import styles from "./Hero.module.css";
-import global from "../../styles/global.module.css";
+import heroStyles from "./Hero.module.css";
+import global from "../../../styles/global.module.css";
 
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -9,34 +9,30 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <section className={styles.hero} id="home">
-      <div className={styles.heroBackground} />
+    <section className={heroStyles.hero} id="home">
+      <div className={heroStyles.heroBackground} />
+      <div className={heroStyles.heroFade} />
       <div className={global.container}>
-        <div className={styles.mainText}>
+        <div className={heroStyles.leftText}>
           <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: "easeOut" }}
-          >
-            Hello! <span>I'm</span>
-          </motion.h1>
-          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            Team RamFerno
-          </motion.h2>
-          <motion.h3
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: "easeOut" }}
+            RamFerno
+          </motion.h1>
+        </div>
+        <div className={heroStyles.rightText}>
+          <motion.h1
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            A software developer and student from London, ON, Canada.
-          </motion.h3>
+            3756
+          </motion.h1>
         </div>
       </div>
-      <div className={styles.links}>
+      <div className={heroStyles.links}>
         <motion.a
           className="gmail"
           href="mailto:contact@ramferno.com"

@@ -1,4 +1,4 @@
-import globalStyles from "../../styles/global.module.css";
+import globalStyles from "../../../styles/global.module.css";
 import styles from "./Code.module.css";
 import { CodeCard } from "./CodeCard";
 
