@@ -12,6 +12,9 @@ export const Hero = () => {
     <section className={heroStyles.hero} id="home">
       <div className={heroStyles.heroBackground} />
       <div className={heroStyles.heroFade} />
+      <div className={heroStyles.textContainer}>
+        <h1>Team RamFerno</h1>
+      </div>
       <div className={heroStyles.links}>
         <motion.a
           className="gmail"

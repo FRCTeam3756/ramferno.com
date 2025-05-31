@@ -3,11 +3,11 @@ import navStyles from "./Navbar.module.css";
 import navBrandImage from '../../assets/images/navbar/brand.webp'
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#community", label: "Community" },
-  { href: "#competition", label: "Competition" },
-  { href: "#campferno", label: "CampFerno" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/community", label: "Community" },
+  { href: "/competition", label: "Competition" },
+  { href: "/campferno", label: "CampFerno" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const Navbar = () => {

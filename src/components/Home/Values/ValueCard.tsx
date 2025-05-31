@@ -11,7 +11,7 @@ export const ValueCard = ({ title, description, image }: ValueCardProps) => (
     <img className={valueStyles.cardImage} src={image}></img>
     <div className={valueStyles.cardText}>
       <span className={valueStyles.cardTitle}>{title}</span>
-      {/* <br/> */}
+      <br/>
       <span className={valueStyles.cardDescription}>{description}</span>
     </div>
   </div>
