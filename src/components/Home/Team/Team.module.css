@@ -1,33 +1,78 @@
-.teamSection {
-  padding: 4rem 2rem;
+.teamContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 3px solid #0047b3;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 70px rgba(0, 61, 184, 0.3);
+}
+
+.textContainer {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textContainer h1 {
+  color: white;
   text-align: center;
-  background-color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.heading {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #222;
+.textContainer p {
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.image {
-  max-width: 100%;
+.teamPhoto {
+  flex: 1 1 55%;
+  max-width: 55%;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1.5rem;
+  object-fit: cover;
 }
 
-.description {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.125rem;
-  color: #555;
-  line-height: 1.6;
-}
+@media (max-width: 771.98px) {
+  .teamContainer {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+  }
 
-.teamContent p {
-  color: white;
-  text-align: center;
-  font-size: 17px;
+  .textContainer, .teamPhoto {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .textContainer p {
+    font-size: 1.1rem;
+    max-width: 90%;
+    margin: 0 auto 1rem auto;
+  }
+
+  .textContainer h1 {
+    font-size: 2.5rem;
+  }
+
+  .teamPhoto {
+    border-radius: 12px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  }
 }

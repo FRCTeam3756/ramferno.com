@@ -7,7 +7,7 @@
   height: 100%;
   width: 100%;
   z-index: -1;
-  filter: brightness(0.9) contrast(1.1) saturate(1.2);
+  filter: brightness(1.0) contrast(1.2) saturate(1.1);
 
   background-image: url('../../../assets/images/hero/background.webp');
   background-size: cover;
@@ -25,6 +25,7 @@
   height: 7.5%;
   background: linear-gradient(to bottom, transparent, black);
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero {
@@ -43,8 +44,8 @@
   padding: 12px 20px;
   border: 1px solid #ff6600;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(3px) brightness(0.5);
+  background-color: #ff660034;
+  backdrop-filter: blur(3px) brightness(0.3);
   width: 80vw;
   align-self: center;
 }
