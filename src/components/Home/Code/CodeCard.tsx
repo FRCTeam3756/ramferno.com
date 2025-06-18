@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "./Code.module.css";
+import styles from "./CodeCard.module.css";
 
 interface Code {
   item: {
