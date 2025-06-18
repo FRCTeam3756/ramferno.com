@@ -16,6 +16,8 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^7.1.0",
     "@mui/material": "^7.1.0",
+    "@react-three/drei": "^10.3.0",
+    "@react-three/fiber": "^9.1.2",
     "framer-motion": "^12.12.1",
     "ramferno.com": "file:",
     "react": "^19.1.0",
