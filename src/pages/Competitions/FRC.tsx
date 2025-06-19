@@ -9,7 +9,7 @@ export const FRC = () => {
       <Navbar />
       <div className={styles.yearContainer}>
         <div className={styles.robotBox}>
-          <ModelViewer modelUrl="/robots/placeholder.gltf" />
+          <ModelViewer modelUrl="/robots/2023.glb" />
         </div>
         <div className={styles.textBox}>
           <h1>Low Rider</h1>

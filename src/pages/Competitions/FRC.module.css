@@ -5,6 +5,7 @@
     align-items: center;
     padding: 4rem 2rem;
     gap: 2rem;
+    height: 80vh;
     min-height: 80vh;
     box-sizing: border-box;
 }
@@ -12,7 +13,7 @@
 .robotBox {
     flex: 1 1 60%;
     max-width: 60%;
-    aspect-ratio: 1/1;
+    height: 100%;
     border-radius: 1rem;
     overflow: hidden;
 }
