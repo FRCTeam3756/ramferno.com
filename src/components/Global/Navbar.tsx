@@ -26,7 +26,7 @@ export const Navbar = () => {
 
   return (
     <nav className={`${navStyles.navbar} ${scrolled ? navStyles.scrolled : ""}`} id="navbar">
-      <img src={navBrandImage}></img>
+      <img src={navBrandImage} className={navStyles.brandImage}></img>
       <ul>
         {navLinks.map(({ href, label }) => (
           <li className={navStyles.navbarItem} key={href}>

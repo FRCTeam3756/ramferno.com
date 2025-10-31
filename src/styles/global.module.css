@@ -29,6 +29,7 @@ h4 {
 }
 
 h1 {
+
   font-size: 2.5rem;
 }
 
@@ -57,7 +58,7 @@ nav {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Momo Trust Sans", sans-serif;
   background: black;
   line-height: 1.8;
   color: var(--grey);

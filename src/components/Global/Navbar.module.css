@@ -1,5 +1,6 @@
 .navbar {
     width: 100%;
+    height: 10%;
     position: fixed;
     left: 0;
     top: 0;
@@ -22,9 +23,11 @@
 }
 
 .navbar img {
+    width: auto;
+    height: auto;
     position: relative;
-    width: 60px;
     margin-right: auto;
+    aspect-ratio: 1.75/1;
 }
 
 .navbar ul {
