@@ -1,12 +1,12 @@
-import { Navbar } from "../../components/Global/Navbar";
-import { Footer } from "../../components/Global/Footer";
+import { NavMenu } from '../../components/Global/NavMenu/NavMenu';
+import { Footer } from '../../components/Global/Footer/Footer';
 import { ModelViewer } from "../../components/Competitions/FRC/ModelViewer/ModelViewer";
 import styles from "./FRC.module.css";
 
 export const FRC = () => {
   return (
     <>
-      <Navbar />
+      <NavMenu />
       <div className={styles.yearContainer}>
         <div className={styles.robotBox}>
           <ModelViewer modelUrl="/robots/2023.glb" />
