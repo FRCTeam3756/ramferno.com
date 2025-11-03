@@ -17,7 +17,7 @@ const projectList = [
     name: "RAM Jam",
     game: "Crescendo",
     github: "https://github.com/FRCTeam3756/2024-FRCRobot",
-    model: "/robots/2023.glb"
+    model: "/robots/2024.glb"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const projectList = [
     name: "Low Rider",
     game: "Reefscape",
     github: "https://github.com/FRCTeam3756/2025-FRCRobot",
-    model: "/robots/2023.glb"
+    model: "/robots/2025.glb"
   }  
 ];
 
