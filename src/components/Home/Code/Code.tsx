@@ -1,6 +1,6 @@
 import globalStyles from "../../../styles/global.module.css";
 import styles from "./Code.module.css";
-import { CodeCard } from "./CodeCard";
+import CodeCard from "./CodeCard";
 
 const projectList = [
   {
@@ -20,7 +20,7 @@ const projectList = [
   },
 ];
 
-export const Code = () => {
+export default function Code() {
   return (
     <section className={globalStyles.section} id="code">
       <div className={globalStyles.container}>

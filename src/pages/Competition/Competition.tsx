@@ -1,9 +1,9 @@
-import { NavMenu } from '../../components/Global/NavMenu/NavMenu';
-import { Footer } from '../../components/Global/Footer/Footer';
-import { ModelViewer } from "../../components/Competitions/FRC/ModelViewer/ModelViewer";
-import styles from "./FRC.module.css";
+import NavMenu from "../../components/Global/NavMenu/NavMenu";
+import Footer from "../../components/Global/Footer/Footer";
+import ModelViewer from "../../components/Competition/ModelViewer/ModelViewer";
+import styles from "./Competition.module.css";
 
-export const FRC = () => {
+export default function Competition() {
   return (
     <>
       <NavMenu />
@@ -19,4 +19,4 @@ export const FRC = () => {
       <Footer />
     </>
   );
-};
+}

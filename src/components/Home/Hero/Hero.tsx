@@ -1,6 +1,6 @@
 import heroStyles from "./Hero.module.css";
 
-export const Hero = () => {
+export default function Hero() {
   return (
     <section className={heroStyles.hero} id="home">
       <div className={heroStyles.heroBackground} />
@@ -11,4 +11,4 @@ export const Hero = () => {
       <div className={heroStyles.heroFade} />
     </section>
   );
-};
+}

@@ -78,12 +78,6 @@
   outline: none;
 }
 
-.toggle:focus-visible {
-  outline: 2px solid #ffffffaa;
-  outline-offset: 4px;
-  border-radius: 4px;
-}
-
 .toggleTextWrap {
   position: relative;
   display: inline-block;

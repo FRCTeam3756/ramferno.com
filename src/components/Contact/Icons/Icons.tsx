@@ -5,7 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import iconStyles from "./Icons.module.css";
 import globalStyles from "../../../styles/global.module.css";
 
-export const Icons = () => {
+export default function Icons() {
   return (
     <div className={globalStyles.row}>
       <a
@@ -34,4 +34,4 @@ export const Icons = () => {
       </a>
     </div>
   );
-};
+}

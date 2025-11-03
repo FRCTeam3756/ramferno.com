@@ -8,7 +8,7 @@ interface Code {
   };
 }
 
-export const CodeCard = ({ item }: Code) => {
+export default function CodeCard({ item }: Code) {
   return (
     <a href={item.github} target="_blank" rel="noopener noreferrer">
       <motion.div

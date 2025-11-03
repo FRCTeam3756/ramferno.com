@@ -2,7 +2,7 @@ import teamStyles from "./Team.module.css";
 import globalStyles from "../../../styles/global.module.css";
 import teamPhoto from "../../../assets/images/team/team.webp";
 
-export const Team = () => {
+export default function Team() {
   return (
     <section className={globalStyles.section} id="team">
       <div className={globalStyles.container}>
@@ -26,4 +26,4 @@ export const Team = () => {
       </div>
     </section>
   );
-};
+}

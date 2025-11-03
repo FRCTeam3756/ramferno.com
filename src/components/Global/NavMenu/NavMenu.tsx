@@ -4,9 +4,10 @@ import styles from "./NavMenu.module.css";
 
 const menuItems = [
   { label: "Home", link: "/" },
-  { label: "Community", link: "/community" },
+  { label: "Robots", link: "/robots" },
+  { label: "Outreach", link: "/outreach" },
   { label: "Competition", link: "/competition" },
-  { label: "CampFerno", link: "/campferno" },
+  { label: "Sponsorship", link: "/sponsorship" },
   { label: "Contact", link: "/contact" },
 ];
 
@@ -34,7 +35,7 @@ const colors = ["#003399", "#ff7700"];
 const logoUrl = "/src/assets/images/navbar/brand.webp";
 const accentColor = "#ff6b6b";
 
-export const NavMenu = () => {
+export default function NavMenu() {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
   const panelRef = useRef<HTMLDivElement | null>(null);

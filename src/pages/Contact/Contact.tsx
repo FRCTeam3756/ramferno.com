@@ -1,9 +1,9 @@
-import { Icons } from "../components/Contact/Icons/Icons";
-import { NavMenu } from '../components/Global/NavMenu/NavMenu';
-import { Footer } from '../components/Global/Footer/Footer';
-import globalStyles from "../styles/global.module.css";
+import Icons from "../../components/Contact/Icons/Icons";
+import NavMenu from '../../components/Global/NavMenu/NavMenu';
+import Footer from '../../components/Global/Footer/Footer';
+import globalStyles from "../../styles/global.module.css";
 
-export const Contact = () => {
+export default function Contact() {
   return (
     <section className={globalStyles.section} id="contact">
       <NavMenu />
