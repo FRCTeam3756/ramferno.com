@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <div className={styles.footer}>
-      <p>Copyright &copy; {year} Team RamFerno</p>
+      <p>Copyright &copy; {year} RamFerno Robotics</p>
     </div>
   );
 };
