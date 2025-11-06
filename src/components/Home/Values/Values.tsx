@@ -1,6 +1,6 @@
 import valueStyles from "./Values.module.css";
 import globalStyles from "../../../styles/global.module.css";
-import { ValueCard } from "./ValueCard";
+import ValueCard from "./ValueCard";
 
 import teamworkImg from "../../../assets/images/values/teamwork.webp";
 import coopertitionImg from "../../../assets/images/values/coopertition.webp";
@@ -27,23 +27,25 @@ const values = [
   },
 ];
 
-export const Values = () => (
-  <section className={globalStyles.section} id="values">
-    <div className={globalStyles.container}>
-      <header className={globalStyles.sectionHeader}>
-        <h1>Values</h1>
-        <h2>Values</h2>
-      </header>
-      <div className={valueStyles.cardsContainer}>
-        {values.map((value) => (
-          <ValueCard
-            key={value.title}
-            title={value.title}
-            description={value.description}
-            image={value.image}
-          />
-        ))}
+export default function Values() {
+  return (
+    <section className={globalStyles.section} id="values">
+      <div className={globalStyles.container}>
+        <header className={globalStyles.sectionHeader}>
+          <h1>Values</h1>
+          <h2>Values</h2>
+        </header>
+        <div className={valueStyles.cardsContainer}>
+          {values.map((value) => (
+            <ValueCard
+              key={value.title}
+              title={value.title}
+              description={value.description}
+              image={value.image}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};

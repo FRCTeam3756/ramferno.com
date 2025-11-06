@@ -42,7 +42,7 @@ function Model({ modelUrl }: ModelProps) {
   );
 }
 
-export const ModelViewer = ({ modelUrl }: { modelUrl: string }) => {
+export default function ModelViewer({ modelUrl }: { modelUrl: string }) {
   return (
     <Canvas camera={{ position: [0, 1.5, 3], fov: 45 }}>
       <ambientLight intensity={0.8} />

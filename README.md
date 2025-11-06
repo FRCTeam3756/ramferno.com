@@ -1,4 +1,4 @@
-# FRC Team RamFerno's Website
+# www.ramferno.com
 
 Welcome to the GitHub repository for Team 3756 RamFerno's website — [www.ramferno.com](https://www.ramferno.com). 
 

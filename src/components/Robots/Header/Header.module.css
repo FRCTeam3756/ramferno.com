@@ -1,0 +1,13 @@
+.header {
+  margin-top: 15%;
+}
+
+.textBox {
+  text-align: center;
+}
+
+.textBox h1 {
+  font-family: "Orbit", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}

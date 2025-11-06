@@ -1,11 +1,11 @@
 import styles from "./Footer.module.css";
 
-export const Footer = () => {
+export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <div className={styles.footer}>
-      <p>Copyright &copy; {year} Team RamFerno</p>
+      <p>Copyright &copy; {year} RamFerno Robotics</p>
     </div>
   );
 };
