@@ -1,3 +1,19 @@
-.section {
-    padding-bottom: 3em;
+.profileGrid {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 500px) {
+    .profileGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .profileGrid {
+        gap: 40px;
+    }
 }

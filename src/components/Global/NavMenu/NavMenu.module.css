@@ -5,6 +5,15 @@
   z-index: 40;
 }
 
+.navMenuWrapper[data-open="false"],
+.navMenuWrapper:not([data-open]) {
+  pointer-events: none;
+}
+
+.navMenuWrapper[data-open="true"] {
+  pointer-events: auto;
+}
+
 .fixedWrapper {
   position: fixed;
   top: 0;
@@ -187,7 +196,7 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--accent, #ff0000);
+  color: #ff7700;
 }
 
 .socialsList {
@@ -215,7 +224,7 @@
 }
 
 .socialsLink:hover {
-  color: var(--accent, #ff0000);
+  color: #ff7700;
 }
 
 .panelTitle {
@@ -253,7 +262,7 @@
 }
 
 .panelItem:hover {
-  color: var(--accent, #5227ff);
+  color: #5227ff;
 }
 
 .panelItemLabel {
