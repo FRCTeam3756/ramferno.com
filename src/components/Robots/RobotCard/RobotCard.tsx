@@ -1,8 +1,8 @@
 import ModelViewer from '../ModelViewer/ModelViewer';
-import styles from './ProjectCard.module.css';
+import styles from './RobotCard.module.css';
 import { Book, FileBox, Github } from 'lucide-react';
 
-interface ProjectCardProps {
+interface RobotCardProps {
   id: number;
   year: string;
   name: string;
@@ -13,9 +13,9 @@ interface ProjectCardProps {
   
 }
 
-export default function ProjectCard({ id, year, name, game, github, model, manual}: ProjectCardProps) {
+export default function RobotCard({ id, year, name, game, github, model, manual}: RobotCardProps) {
   return (
-    <div key={id} className={styles.projectCard}>
+    <div key={id} className={styles.robotCard}>
       <div className={styles.manualBox}>
         <a
           href={manual}
@@ -47,7 +47,7 @@ export default function ProjectCard({ id, year, name, game, github, model, manua
             <Github />
           </a>
         ) : (
-          <p className={styles.noGithub}>GitHub unavailable</p>
+          <Github className={styles.noGithub}/>
         )}
       </div>
     </div>

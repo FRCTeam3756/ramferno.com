@@ -2,9 +2,9 @@ import valueStyles from "./Values.module.css";
 import globalStyles from "../../../styles/global.module.css";
 import ValueCard from "./ValueCard";
 
-import teamworkImg from "../../../assets/images/values/teamwork.webp";
-import coopertitionImg from "../../../assets/images/values/coopertition.webp";
-import leadershipImg from "../../../assets/images/values/leadership.webp";
+import teamworkImg from "../../../assets/images/home/values/teamwork.webp";
+import coopertitionImg from "../../../assets/images/home/values/coopertition.webp";
+import leadershipImg from "../../../assets/images/home/values/leadership.webp";
 
 const values = [
   {
@@ -45,6 +45,7 @@ export default function Values() {
             />
           ))}
         </div>
+        <div className={valueStyles.spacer}/>
       </div>
     </section>
   );

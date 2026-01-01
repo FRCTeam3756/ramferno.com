@@ -32,7 +32,7 @@ export interface NavMenuSocialItem {
 const menuButtonColor = "#fff";
 const openMenuButtonColor = "#000000ff";
 const colors = ["#003399", "#ff7700"];
-const logoUrl = "/src/assets/images/navbar/brand.webp";
+const logoUrl = "/src/assets/images/global/navbar/brand.webp";
 const accentColor = "#ff6b6b";
 
 export default function NavMenu() {

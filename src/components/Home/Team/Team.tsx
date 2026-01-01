@@ -1,6 +1,6 @@
 import teamStyles from "./Team.module.css";
 import globalStyles from "../../../styles/global.module.css";
-import teamPhoto from "../../../assets/images/team/team.webp";
+import teamPhoto from "../../../assets/images/home/team/team.webp";
 
 export default function Team() {
   return (

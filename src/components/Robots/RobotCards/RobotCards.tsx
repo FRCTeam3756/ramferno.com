@@ -1,7 +1,7 @@
-import ProjectCard from '../ProjectCard/ProjectCard';
-import styles from './Projects.module.css';
+import RobotCard from '../RobotCard/RobotCard';
+import styles from './RobotCards.module.css';
 
-interface ProjectCardProps {
+interface RobotCardProps {
   id: number;
   year: string;
   name: string;
@@ -11,7 +11,7 @@ interface ProjectCardProps {
   manual: string;
 }
 
-const projectList: ProjectCardProps[] = [
+const robotList: RobotCardProps[] = [
   {
     id: 0,
     year: "2023",
@@ -41,18 +41,18 @@ const projectList: ProjectCardProps[] = [
   }  
 ];
 
-export default function Projects() {
+export default function RobotCards() {
   return (
     <div className={styles.container}>
-      {projectList.map((project) => (
-        <ProjectCard
-          id={project.id}
-          year={project.year}
-          name={project.name}
-          game={project.game}
-          github={project.github}
-          model={project.model}
-          manual={project.manual}
+      {robotList.map((robot) => (
+        <RobotCard
+          id={robot.id}
+          year={robot.year}
+          name={robot.name}
+          game={robot.game}
+          github={robot.github}
+          model={robot.model}
+          manual={robot.manual}
         />
       ))}
     </div>

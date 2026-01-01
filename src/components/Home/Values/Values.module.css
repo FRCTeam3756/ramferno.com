@@ -44,6 +44,10 @@
   transform: translateY(-5px);
 }
 
+.spacer {
+  height: 100px;
+}
+
 @media (max-width: 500px) {
   .card {
     width: 100%;

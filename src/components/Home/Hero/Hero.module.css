@@ -9,7 +9,7 @@
   z-index: -1;
   filter: contrast(1.05) saturate(1.1) brightness(0.5);
 
-  background-image: url('../../../assets/images/hero/background.webp');
+  background-image: url('../../../assets/images/home/hero/background.webp');
   background-size: cover;
   background-position: center;
   height: 100vh;

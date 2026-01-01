@@ -7,7 +7,7 @@ export default function Sponsorship() {
   return (
     <>
       <Helmet>
-        <title>Our Robots | RamFerno Robotics</title>
+        <title>Sponsorship | RamFerno Robotics</title>
         <meta name="description" content="Partner with RamFerno Robotics — see sponsor benefits and how to support our STEM initiatives." />
       </Helmet>
       <NavMenu />
