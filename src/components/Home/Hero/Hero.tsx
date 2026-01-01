@@ -5,12 +5,11 @@ export default function Hero() {
   return (
     <section className={heroStyles.hero} id="home">
       <img
+        className={heroStyles.heroBackground}
         src={heroBackground}
         alt=""
-        aria-hidden
-        loading="eager"
         fetchPriority="high"
-        className={heroStyles.heroBackground}
+        decoding="async"
       />
 
       <div className={heroStyles.heroText}>
