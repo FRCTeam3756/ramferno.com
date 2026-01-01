@@ -1,0 +1,82 @@
+:root {
+  /* Colours */
+  --primary: #ff7700;
+  --light: #ff9940;
+  --dark: #a14b00;
+  --accent: #003399;
+  --white: #fff;
+  --grey: #b4b4b4;
+  --transparent-grey: #ffffff1a;
+  --black: #000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: .3s all ease;
+}
+
+a:hover {
+  color: var(--light);
+}
+
+button:focus {
+  outline: 1px dotted;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
+}
+
+h1 {
+
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: visible;
+}
+
+nav {
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+
+body {
+  font-family: "Momo Trust Sans", sans-serif;
+  background: black;
+  line-height: 1.8;
+  color: var(--grey);
+  margin: 0;
+}

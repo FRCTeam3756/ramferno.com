@@ -8,6 +8,7 @@ import Outreach from "./pages/Outreach/Outreach";
 import Sponsorship from "./pages/Sponsorship/Sponsorship";
 import NotFound from "./pages/NotFound/NotFound";
 
+import './styles.css';
 
 export default function App() {
   return (

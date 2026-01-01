@@ -1,5 +1,4 @@
-import globalStyles from "../../styles/global.module.css";
-import contactStyles from "./Contact.module.css"
+import styles from "./Contact.module.css"
 
 import NavMenu from '../../components/Global/NavMenu/NavMenu';
 import Footer from '../../components/Global/Footer/Footer';
@@ -63,15 +62,15 @@ export default function Contact() {
         <title>Contact | RamFerno Robotics</title>
         <meta name="description" content="RamFerno Robotics from Sir Wilfrid Laurier S.S. inspires students through FIRST competition, outreach, and STEM education." />
       </Helmet>
-      <section className={globalStyles.section} id="contact">
+      <section className={styles.section} id="contact">
         <NavMenu />
-        <div className={globalStyles.container}>
-          <header className={globalStyles.sectionHeader}>
+        <div className={styles.container}>
+          <header className={styles.sectionHeader}>
             <h1>Contact</h1>
             <h2>Contact</h2>
           </header>
 
-          <div className={contactStyles.profileGrid}>
+          <div className={styles.profileGrid}>
             {profileList.map((profile) => (
               <ProfileCard
                 name={profile.name}

@@ -5,6 +5,38 @@
   gap: 2rem;
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 85vw;
+  }
+}
+
 .spacer {
   height: 100px;
+}
+
+.section {
+  padding-top: 7em;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding-top: 6em;
+  }
 }

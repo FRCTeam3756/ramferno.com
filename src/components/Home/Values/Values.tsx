@@ -1,5 +1,4 @@
-import valueStyles from "./Values.module.css";
-import globalStyles from "../../../styles/global.module.css";
+import styles from "./Values.module.css";
 import ValueCard from "./ValueCard";
 
 import teamworkGreyImg from "../../../assets/images/home/values/teamwork_grey.webp";
@@ -35,9 +34,9 @@ const values = [
 
 export default function Values() {
   return (
-    <section className={globalStyles.section} id="values">
-      <div className={globalStyles.container}>
-        <div className={valueStyles.cardsContainer}>
+    <section className={styles.section} id="values">
+      <div className={styles.container}>
+        <div className={styles.cardsContainer}>
           {values.map((value) => (
             <ValueCard
               key={value.title}
@@ -48,7 +47,7 @@ export default function Values() {
             />
           ))}
         </div>
-        <div className={valueStyles.spacer} />
+        <div className={styles.spacer} />
       </div>
     </section>
   );
