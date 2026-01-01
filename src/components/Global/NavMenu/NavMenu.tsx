@@ -382,40 +382,44 @@ export default function NavMenu() {
         })()}
       </div>
 
-      <header className={styles.navMenuHeader}>
-        <div className={styles.logo}>
-          <img
-            src={logoUrl}
-            alt="Logo"
-            className={styles.logoImg}
-            draggable={false}
-            width={110}
-            height={24}
-          />
-        </div>
-        <button
-          ref={toggleBtnRef}
-          className={styles.toggle}
-          onClick={toggleMenu}
-          type="button"
-        >
-          <span ref={textWrapRef} className={styles.toggleTextWrap}>
-            <span ref={textInnerRef} className={styles.toggleTextInner}>
-              {textLines.map((l, i) => (
-                <span className={styles.toggleLine} key={i}>
-                  {l}
-                </span>
-              ))}
-            </span>
-          </span>
-          <span ref={iconRef} className={styles.icon}>
-            <span ref={plusHRef} className={styles.iconLine} />
-            <span
-              ref={plusVRef}
-              className={`${styles.iconLine} ${styles.iconLineV}`}
+      <header>
+        <div className={styles.navMenuHeader}>
+          <div className={styles.logo}>
+            <img
+              src={logoUrl}
+              alt="Logo"
+              className={styles.logoImg}
+              draggable={false}
+              width={110}
+              height={24}
             />
-          </span>
-        </button>
+          </div>
+        </div>
+        <div className={styles.menuButtonWrapper}>
+          <button
+            ref={toggleBtnRef}
+            className={styles.toggle}
+            onClick={toggleMenu}
+            type="button"
+          >
+            <span ref={textWrapRef} className={styles.toggleTextWrap}>
+              <span ref={textInnerRef} className={styles.toggleTextInner}>
+                {textLines.map((l, i) => (
+                  <span className={styles.toggleLine} key={i}>
+                    {l}
+                  </span>
+                ))}
+              </span>
+            </span>
+            <span ref={iconRef} className={styles.icon}>
+              <span ref={plusHRef} className={styles.iconLine} />
+              <span
+                ref={plusVRef}
+                className={`${styles.iconLine} ${styles.iconLineV}`}
+              />
+            </span>
+          </button>
+        </div>
       </header>
 
       <aside
@@ -468,4 +472,4 @@ export default function NavMenu() {
       </aside>
     </div>
   );
-};
+}
