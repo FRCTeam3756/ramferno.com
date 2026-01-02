@@ -31,6 +31,10 @@
   font-weight: bold;
 }
 
+.heroText h2 {
+  font-size: 1.8rem;
+}
+
 @media (max-width: 500px) {
   .heroText h1 {
     font-size: 3rem;

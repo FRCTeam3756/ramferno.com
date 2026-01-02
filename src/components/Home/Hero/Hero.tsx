@@ -16,7 +16,7 @@ export default function Hero() {
 
       <div className={heroStyles.heroText}>
         <h1>RamFerno Robotics</h1>
-        <h3>Your 2025 North Bay District Champions!</h3>
+        <h2>Your 2025 North Bay District Champions!</h2>
       </div>
       <div className={heroStyles.heroFade} />
     </section>
