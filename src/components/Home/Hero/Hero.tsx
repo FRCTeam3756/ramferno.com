@@ -1,13 +1,18 @@
 import heroStyles from "./Hero.module.css";
-import heroBackground from "../../../assets/images/home/hero/background.webp?w=640;1024;1600;1920&imagetools";
+import heroBackground from "../../../assets/images/home/hero/background.webp";
 
 export default function Hero() {
   return (
     <section className={heroStyles.hero} id="home">
       <img
         className={heroStyles.heroBackground}
-        src={heroBackground.src}
-        srcSet={heroBackground.srcset}
+        src={heroBackground}
+        srcSet={`
+          ${heroBackground}?w=480 480w,
+          ${heroBackground}?w=768 768w,
+          ${heroBackground}?w=1024 1024w,
+          ${heroBackground}?w=1440 1440w,
+        `}
         sizes="100vw"
         alt=""
         fetchPriority="high"

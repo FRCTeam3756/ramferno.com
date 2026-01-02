@@ -1,12 +1,12 @@
 import styles from "./Values.module.css";
 import ValueCard from "./ValueCard";
 
-import teamworkGreyImg from "../../../assets/images/home/values/teamwork_grey.webp?w=640;1024;1600;1920&imagetools";
-import teamworkImg from "../../../assets/images/home/values/teamwork.webp?w=640;1024;1600;1920&imagetools";
-import coopertitionGreyImg from "../../../assets/images/home/values/coopertition_grey.webp?w=640;1024;1600;1920&imagetools";
-import coopertitionImg from "../../../assets/images/home/values/coopertition.webp?w=640;1024;1600;1920&imagetools";
-import leadershipGreyImg from "../../../assets/images/home/values/leadership_grey.webp?w=640;1024;1600;1920&imagetools";
-import leadershipImg from "../../../assets/images/home/values/leadership.webp?w=640;1024;1600;1920&imagetools";
+import teamworkGreyImg from "../../../assets/images/home/values/teamwork_grey.webp";
+import teamworkImg from "../../../assets/images/home/values/teamwork.webp";
+import coopertitionGreyImg from "../../../assets/images/home/values/coopertition_grey.webp";
+import coopertitionImg from "../../../assets/images/home/values/coopertition.webp";
+import leadershipGreyImg from "../../../assets/images/home/values/leadership_grey.webp";
+import leadershipImg from "../../../assets/images/home/values/leadership.webp";
 
 const values = [
   {
@@ -46,10 +46,8 @@ export default function Values() {
               title={value.title}
               alt={value.alt}
               description={value.description}
-              greyImageSrc={value.greyImage.src}
-              greyImageSrcSet={value.greyImage.srcset}
-              imageSrc={value.image.src}
-              imageSrcSet={value.image.srcset}
+              greyImage={value.greyImage}
+              image={value.image}
             />
           ))}
         </div>
