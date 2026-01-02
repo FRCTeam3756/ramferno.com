@@ -13,6 +13,7 @@ const values = [
     title: "TEAMWORK",
     description:
       "RamFerno encourages teamwork by having students overcome challenges together while learning soft skills such as communication, collaboration and creative thinking.",
+    alt: "Teamwork Image",
     greyImage: teamworkGreyImg,
     image: teamworkImg,
   },
@@ -20,6 +21,7 @@ const values = [
     title: "COOPERTITION",
     description:
       '"At FIRST, Coopertition® is displaying unqualified kindness and respect in the face of fierce competition" (Vision and Mission, 2015).',
+    alt: "Coopertition Image",
     greyImage: coopertitionGreyImg,
     image: coopertitionImg,
   },
@@ -27,6 +29,7 @@ const values = [
     title: "LEADERSHIP",
     description:
       "Our Rams learn leadership through guiding each other and sharing their expertise with others. Our leaders gain decision-making skills, practice public speaking and build confidence.",
+    alt: "Leadership Image",
     greyImage: leadershipGreyImg,
     image: leadershipImg,
   },
@@ -41,6 +44,7 @@ export default function Values() {
             <ValueCard
               key={value.title}
               title={value.title}
+              alt={value.alt}
               description={value.description}
               greyImageSrc={value.greyImage.src}
               greyImageSrcSet={value.greyImage.srcset}
