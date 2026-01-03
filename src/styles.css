@@ -10,6 +10,11 @@
   --black: #000;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+}
+
 *,
 *::before,
 *::after {
