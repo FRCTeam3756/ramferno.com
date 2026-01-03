@@ -12,7 +12,7 @@ const values = [
   {
     title: "TEAMWORK",
     description:
-      "RamFerno encourages teamwork by having students overcome challenges together while learning soft skills such as communication, collaboration and creative thinking.",
+      "Students collaborate to overcome challenges while developing soft skills such as communication, collaboration and creative thinking.",
     alt: "Teamwork Image",
     greyImage: teamworkGreyImg,
     image: teamworkImg,
@@ -28,7 +28,7 @@ const values = [
   {
     title: "LEADERSHIP",
     description:
-      "Our Rams learn leadership through guiding each other and sharing their expertise with others. Our leaders gain decision-making skills, practice public speaking and build confidence.",
+      "Our Rams learn leadership through sharing their expertise, decision-making skills and practice public speaking.",
     alt: "Leadership Image",
     greyImage: leadershipGreyImg,
     image: leadershipImg,

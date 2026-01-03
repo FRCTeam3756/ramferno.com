@@ -2,14 +2,30 @@
   position: absolute;
   top: 0;
   left: 0;
+
   height: 100%;
   width: 100%;
+
+  object-fit: cover;
+  object-position: 50% 15%;
+
   z-index: -1;
 
   filter: contrast(1.05) saturate(1.1) brightness(0.5);
 }
 
-.heroBackground::after {
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -33,35 +49,6 @@
 
 .heroText h2 {
   font-size: 1.8rem;
-}
-
-@media (max-width: 500px) {
-  .heroText h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 767.78px) {
-  .heroText h1 {
-    font-size: 4rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .heroText h1 {
-    font-size: 6rem;
-  }
-}
-
-.hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 150px;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
 }
 
 .text {
@@ -91,4 +78,22 @@
   background-color: var(--light);
   opacity: 0.2;
   margin: 0 20px;
+}
+
+@media (max-width: 500px) {
+  .heroText h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 991.98px) {
+  .heroText h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .heroText h1 {
+    font-size: 6rem;
+  }
 }
