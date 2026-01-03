@@ -1,11 +1,11 @@
-import heroStyles from "./Hero.module.css";
+import styles from "./Hero.module.css";
 import heroBackground from "../../../assets/images/home/hero/background.webp";
 
 export default function Hero() {
   return (
-    <section className={heroStyles.hero} id="home">
+    <section className={styles.hero} id="home">
       <img
-        className={heroStyles.heroBackground}
+        className={styles.heroBackground}
         src={heroBackground}
         srcSet={`
           ${heroBackground}?w=480 480w,
@@ -19,11 +19,11 @@ export default function Hero() {
         decoding="async"
       />
 
-      <div className={heroStyles.heroText}>
+      <div className={styles.heroText}>
         <h1>RamFerno Robotics</h1>
         <h2>Your 2025 North Bay District Champions!</h2>
       </div>
-      <div className={heroStyles.heroFade} />
+      <div className={styles.heroFade} />
     </section>
   );
 }

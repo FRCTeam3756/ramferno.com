@@ -2,6 +2,7 @@ import NavMenu from "../../components/Global/NavMenu/NavMenu";
 import Footer from "../../components/Global/Footer/Footer";
 
 import { Helmet } from "@vuer-ai/react-helmet-async";
+import InProgress from "../../components/InProgress/InProgress";
 
 export default function Competition() {
   return (
@@ -11,6 +12,7 @@ export default function Competition() {
         <meta name="description" content="Competitive history, championship results, and awards earned by RamFerno Robotics." />
       </Helmet>
       <NavMenu />
+      <InProgress />
       <Footer />
     </>
   );

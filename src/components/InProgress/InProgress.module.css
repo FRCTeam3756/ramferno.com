@@ -1,0 +1,24 @@
+section {
+  height: calc(100vh - 57.594px - 32px); /* Full viewport height */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Optional: center text */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box;
+}
+
+
+.text {
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 4em;
+}
+
+.text p {
+  font-size: 1.5em;
+}

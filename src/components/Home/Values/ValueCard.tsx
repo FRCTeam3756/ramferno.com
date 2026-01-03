@@ -1,4 +1,4 @@
-import valueCardStyles from "./ValueCard.module.css";
+import styles from "./ValueCard.module.css";
 
 interface ValueCardProps {
   title: string;
@@ -10,10 +10,10 @@ interface ValueCardProps {
 
 export default function ValueCard({ title, description, alt, greyImage, image }: ValueCardProps) {
   return (
-    <div className={valueCardStyles.card}>
-      <div className={valueCardStyles.cardImageWrapper}>
+    <div className={styles.card}>
+      <div className={styles.cardImageWrapper}>
         <img 
-          className={valueCardStyles.cardGreyImage}
+          className={styles.cardGreyImage}
           alt={alt}
           src={greyImage}
         srcSet={`
@@ -25,7 +25,7 @@ export default function ValueCard({ title, description, alt, greyImage, image }:
           sizes="(max-width: 1200px) 100vw, 33vw">
         </img>
         <img 
-          className={valueCardStyles.cardImage}
+          className={styles.cardImage}
           alt={alt}
           src={image}
           srcSet={`
@@ -36,9 +36,9 @@ export default function ValueCard({ title, description, alt, greyImage, image }:
           `}
           sizes="(max-width: 1200px) 100vw, 33vw">
         </img>
-        <div className={valueCardStyles.cardRibbon}>
-          <span className={valueCardStyles.cardTitle}>{title}</span>
-          <span className={valueCardStyles.cardDescription}>{description}</span>
+        <div className={styles.cardRibbon}>
+          <span className={styles.cardTitle}>{title}</span>
+          <span className={styles.cardDescription}>{description}</span>
         </div>
       </div>
     </div>
