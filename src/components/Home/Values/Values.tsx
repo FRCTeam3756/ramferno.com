@@ -15,7 +15,7 @@ const values = [
       "Students collaborate to overcome challenges while developing soft skills such as communication, collaboration and creative thinking.",
     alt: "Teamwork Image",
     greyImage: teamworkGreyImg,
-    image: teamworkImg,
+    colorImage: teamworkImg,
   },
   {
     title: "COOPERTITION",
@@ -23,7 +23,7 @@ const values = [
       '"At FIRST, Coopertition® is displaying unqualified kindness and respect in the face of fierce competition" (Vision and Mission, 2015).',
     alt: "Coopertition Image",
     greyImage: coopertitionGreyImg,
-    image: coopertitionImg,
+    colorImage: coopertitionImg,
   },
   {
     title: "LEADERSHIP",
@@ -31,7 +31,7 @@ const values = [
       "Our Rams learn leadership through sharing their expertise, decision-making skills and practice public speaking.",
     alt: "Leadership Image",
     greyImage: leadershipGreyImg,
-    image: leadershipImg,
+    colorImage: leadershipImg,
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Values() {
               alt={value.alt}
               description={value.description}
               greyImage={value.greyImage}
-              image={value.image}
+              colorImage={value.colorImage}
             />
           ))}
         </div>

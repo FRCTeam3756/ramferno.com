@@ -1,112 +1,148 @@
 .card {
-  width: calc(33.333% - 2rem);
   max-width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
-  flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
-.cardImageWrapper {
+.imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1/1;
-  overflow: hidden;
   height: 50vh;
+  overflow: hidden;
+  display: grid;
 }
 
-.cardGreyImage,
-.cardImage {
-  position: absolute;
-  top: 0;
-  left: 0;
+.greyImage,
+.colorImage {
+  grid-area: 1 / 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: opacity 0.4s ease;
+  will-change: opacity;
 }
 
-.cardGreyImage {
+.greyImage {
   z-index: 1;
   opacity: 1;
 }
 
-.cardImage {
+.colorImage {
   z-index: 0;
   opacity: 0;
 }
 
-.cardImageWrapper:hover .cardGreyImage {
+.imageWrapper:hover .greyImage {
   opacity: 0;
 }
 
-.cardImageWrapper:hover .cardImage {
+.imageWrapper:hover .colorImage {
   opacity: 1;
 }
 
-.cardRibbon {
-  z-index: 2;
+.ribbon {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 1.5rem 0;
   display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 1.5rem 0;
+  background: rgba(0, 0, 0, 0.4);
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+  transition: transform 0.4s ease;
 }
 
-.cardTitle {
+.title {
   color: white;
   font-weight: 800;
   font-size: clamp(1.5rem, 4vw, 2rem);
-  transition: opacity 0.3s ease;
+  text-align: left;
 }
 
-.cardDescription {
-  display: none;
-  color: white;
-  font-size: 1rem;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.3);
+.description {
   position: absolute;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
-.card:hover .cardTitle {
+.card:hover .title {
   opacity: 0;
 }
 
-.card:hover .cardDescription {
+.card:hover .description {
   opacity: 1;
-  display: flex;
 }
 
-@media (max-width: 500px) {
+@media (max-aspect-ratio: 1/1) {
+  .ribbon {
+    bottom: auto;
+    left: 0;
+    top: 50%;
+    width: 4rem;
+    height: 100%;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    transform-origin: left center;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .title {
+    writing-mode: vertical-rl;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    text-align: center;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .card:hover .ribbon {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .card:hover .title {
+    opacity: 0;
+  }
+
+  .card:hover .description {
+    display: flex;
+  }
+
   .card {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
 
-@media (min-width: 500px) and (max-width: 1200px) {
-  .card {
-    aspect-ratio: 1 / 1.5;
-    padding: 0.5em;
-    text-align: left;
-    align-items: flex-start;
+  .imageWrapper {
+    height: 50vh;
+    max-height: 400px;
   }
 }

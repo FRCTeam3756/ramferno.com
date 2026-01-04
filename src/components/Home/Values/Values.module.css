@@ -1,10 +1,10 @@
 .cardsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin-right: auto;
   margin-left: auto;
-  gap: 2rem;
+  max-width: 100%;
 }
 
 .container {
@@ -14,17 +14,15 @@
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  max-width: 85vw;
+  flex-direction: column;
 }
 
-@media (max-width: 991.98px) {
-  .container {
-    max-width: 90vw;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 85vw;
+@media (max-aspect-ratio: 1/1) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    max-width: 70vw;
+    gap: 1.5rem;
   }
 }
 
