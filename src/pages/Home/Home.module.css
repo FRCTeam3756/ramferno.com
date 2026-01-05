@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 85vw;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    max-width: 70vw;
+    gap: 1.5rem;
+  }
+}
+
+.spacer {
+  height: 100px;
+}
+
+.heroSection {
+    width: 100%;
+}
+
+.valuesSection {
+  position: relative;
+  width: 100%;
+  padding-top: 7em;
+}
+
+@media (max-width: 767.98px) {
+  .valuesSection {
+    padding-top: 6em;
+  }
+
+  .cardsContainer {
+    width: 90%;
+  }
+}

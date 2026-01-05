@@ -62,7 +62,7 @@ export default function Contact() {
         <title>Contact | RamFerno Robotics</title>
         <meta name="description" content="RamFerno Robotics from Sir Wilfrid Laurier S.S. inspires students through FIRST competition, outreach, and STEM education." />
       </Helmet>
-      <section className={styles.section} id="contact">
+      <section id="contact" className={styles.section}>
         <NavMenu />
         <div className={styles.container}>
           <header className={styles.sectionHeader}>

@@ -3,8 +3,8 @@
   top: 0;
   left: 0;
 
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   object-fit: cover;
   object-position: 50%;
@@ -20,21 +20,25 @@
   flex-direction: column;
   align-items: center;
   padding-top: 150px;
-  height: 100vh;
+  padding-bottom: 50vh;
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
-.hero::after {
-  content: "";
+.heroFade {
   position: absolute;
   bottom: 0;
   left: 0;
+  height: 35vh;
   width: 100%;
-  height: 50vh;
-  background: linear-gradient(to bottom, transparent, black);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    black
+  );
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 .heroText {

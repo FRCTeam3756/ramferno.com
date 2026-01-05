@@ -64,13 +64,13 @@
   }
 }
 
-.section {
+.contactSection {
   padding-top: 7em;
   position: relative;
 }
 
 @media (max-width: 767.98px) {
-  .section {
+  .contactSection {
     padding-top: 6em;
   }
 }

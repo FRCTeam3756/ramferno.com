@@ -3,7 +3,7 @@ import heroBackground from "../../../assets/images/home/hero/background.webp";
 
 export default function Hero() {
   return (
-    <section className={styles.hero} id="home">
+    <section id="home" className={styles.hero}>
       <img
         className={styles.heroBackground}
         src={heroBackground}
