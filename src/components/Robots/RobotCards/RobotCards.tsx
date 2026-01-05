@@ -44,8 +44,9 @@ const robotList: RobotCardProps[] = [
 export default function RobotCards() {
   return (
     <div className={styles.container}>
-      {robotList.map((robot) => (
+      {robotList.map((robot, i) => (
         <RobotCard
+          key={i}
           id={robot.id}
           year={robot.year}
           name={robot.name}
