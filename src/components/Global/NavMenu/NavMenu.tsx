@@ -1,7 +1,9 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { FaTwitter, FaInstagram, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import logoUrl from "../../../assets/images/global/navbar/brand.webp";
 import styles from "./NavMenu.module.css";
+import type { IconType } from "react-icons";
 
 const menuItems = [
   { label: "Home", link: "/" },
@@ -13,11 +15,11 @@ const menuItems = [
 ];
 
 const socialItems = [
-  { label: "Twitter", link: "https://twitter.com/ramferno3756" },
-  { label: "Instagram", link: "https://www.instagram.com/3756ramferno/" },
-  { label: "Facebook", link: "https://www.facebook.com/3756RamFerno/" },
-  { label: "GitHub", link: "https://github.com/FRCTeam3756" },
-  { label: "LinkedIn", link: "https://www.linkedin.com/in/ramferno/" },
+  { icon: FaTwitter, link: "https://twitter.com/ramferno3756" },
+  { icon: FaInstagram, link: "https://www.instagram.com/3756ramferno/" },
+  { icon: FaFacebook, link: "https://www.facebook.com/3756RamFerno/" },
+  { icon: FaGithub, link: "https://github.com/FRCTeam3756" },
+  { icon: FaLinkedin, link: "https://www.linkedin.com/in/ramferno/" },
 ];
 
 export interface NavMenuItem {
@@ -26,14 +28,13 @@ export interface NavMenuItem {
 }
 
 export interface NavMenuSocialItem {
-  label: string;
+  icon: IconType;
   link: string;
 }
 
 const menuButtonColor = "#fff";
 const openMenuButtonColor = "#000000ff";
-const colors = ["#003399", "#ff7700"];
-const accentColor = "#ff6b6b";
+const colors = ["#003aaf", "#ff7700"];
 
 export default function NavMenu() {
   const [open, setOpen] = useState(false);
@@ -357,11 +358,6 @@ export default function NavMenu() {
   return (
     <div
       className={`${styles.navMenuWrapper} ${styles.fixedWrapper}`}
-      style={
-        accentColor
-          ? { ["--accent" as keyof React.CSSProperties]: accentColor }
-          : undefined
-      }
       data-open={open || undefined}
     >
       <div ref={preLayersRef} className={styles.prelayers}>
@@ -454,14 +450,14 @@ export default function NavMenu() {
               <h3 className={styles.socialsTitle}>Socials</h3>
               <ul className={styles.socialsList} role="list">
                 {socialItems.map((s, i) => (
-                  <li key={s.label + i}>
+                  <li key={i}>
                     <a
                       href={s.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.socialsLink}
                     >
-                      {s.label}
+                      <s.icon size={22}/>
                     </a>
                   </li>
                 ))}
