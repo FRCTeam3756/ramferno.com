@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowRight, FileBox, X } from "lucide-react";
@@ -64,43 +66,46 @@ export default function RobotScroller({
         </motion.div>
       </div>
 
-      <div className={styles.contentCard}>
-        <div className={styles.textColumn}>
-          <div className={styles.actions}>
-            <a href={manual} target="_blank" rel="noopener noreferrer">
-              <button className={styles.button}>
+      <div className={styles.contentRibbon}>
+        <div className={styles.contentCard}>
+          <div className={styles.textColumn}>
+            <div className={styles.actions}>
+              <button
+                className={styles.button}
+                onClick={() => window.open(manual, "_blank")}
+              >
                 <span className={styles.label}>Game Manual</span>
                 <span className={styles.iconWrapper}>
                   <ArrowDown />
                 </span>
               </button>
-            </a>
 
-            {github ? (
-              <button 
-                className={styles.button}
-                onClick={() => window.open(github, "_blank")}
-              >
-                <span className={styles.label}>Code Release</span>
-                <span className={styles.iconWrapper}>
-                  <ArrowRight />
-                </span>
-              </button>
-            ) : (
-              <div className={styles.actionDisabled}>
-                <button className={styles.button}>
-                  <span className={styles.label}>Code Unavailable</span>
+              {github ? (
+                <button
+                  className={styles.button}
+                  onClick={() => window.open(github, "_blank")}
+                >
+                  <span className={styles.label}>Code Release</span>
                   <span className={styles.iconWrapper}>
-                    <X />
+                    <ArrowRight />
                   </span>
                 </button>
-              </div>
-            )}
+              ) : (
+                <div className={styles.actionDisabled}>
+                  <button className={styles.button}>
+                    <span className={styles.label}>Code Unavailable</span>
+                    <span className={styles.iconWrapper}>
+                      <X />
+                    </span>
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
 
-        <div className={styles.mediaColumn}>
-          {model ? <ModelViewer modelUrl={model} /> : <FileBox />}
+          <div className={styles.mediaColumn}>
+            {model ? <ModelViewer modelUrl={model} /> : <FileBox />}
+          </div>
         </div>
       </div>
     </div>

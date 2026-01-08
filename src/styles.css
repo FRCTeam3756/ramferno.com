@@ -73,6 +73,10 @@ button {
   overflow: visible;
 }
 
+button:focus {
+  outline: none;
+}
+
 nav {
   display: flex;
   padding: 0.5rem 1rem;
