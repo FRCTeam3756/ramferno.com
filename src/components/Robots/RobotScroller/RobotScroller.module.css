@@ -49,10 +49,10 @@
 }
 
 .subheading {
-  margin-bottom: 0.5rem;
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  margin: 0;
 }
 
 .heading {
@@ -60,6 +60,7 @@
   font-size: 3rem;
   line-height: 2.5rem;
   font-weight: 700;
+  margin: 1rem;
 }
 
 .contentRibbon {
@@ -125,6 +126,7 @@
   background-color: #151515;
   color: white;
 
+  cursor: pointer;
   border: none;
   transition: background-color 0.2s ease;
 }
@@ -173,7 +175,6 @@
   }
 
   .subheading {
-    margin-bottom: 1rem;
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
