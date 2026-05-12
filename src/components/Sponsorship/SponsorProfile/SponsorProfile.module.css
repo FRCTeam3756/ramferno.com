@@ -1,0 +1,142 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.addIcon {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlayTop {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 35%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+}
+
+.overlayBottom {
+  position: absolute;
+  bottom: 0;
+  height: 8rem;
+  width: 100%;
+  backdrop-filter: blur(5px);
+
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  backdrop-filter: blur(12px);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 20%
+  );
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.name {
+  font-size: clamp(1.1rem, 2.5cqw, 1.5rem);
+  font-weight: 700;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.verified {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #22c55e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #fff;
+  margin: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.stat strong {
+  color: #111827;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease;
+}
+
+.follow {
+  background: #111827;
+  color: white;
+}
+
+.follow:hover {
+  background: #1f2937;
+}
+
+.following {
+  background: #e5e7eb;
+  color: #374151;
+}

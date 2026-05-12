@@ -7,13 +7,6 @@ export default function Hero() {
       <img
         className={styles.heroBackground}
         src={heroBackground}
-        srcSet={`
-          ${heroBackground}?w=480 480w,
-          ${heroBackground}?w=768 768w,
-          ${heroBackground}?w=1024 1024w,
-          ${heroBackground}?w=1440 1440w,
-        `}
-        sizes="100vw"
         alt=""
         fetchPriority="high"
         decoding="async"
