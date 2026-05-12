@@ -7,21 +7,24 @@ import Competition from "./pages/Competition/Competition";
 import Outreach from "./pages/Outreach/Outreach";
 import Sponsorship from "./pages/Sponsorship/Sponsorship";
 import NotFound from "./pages/NotFound/NotFound";
+import SmoothScroll from "./components/Global/SmoothScroll/SmoothScroll";
 
 import './styles.css';
 
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/robots" element={<Robots />} />
-        <Route path="/competition" element={<Competition />} />
-        <Route path="/outreach" element={<Outreach />} />
-        <Route path="/sponsorship" element={<Sponsorship />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <SmoothScroll>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/robots" element={<Robots />} />
+          <Route path="/competition" element={<Competition />} />
+          <Route path="/outreach" element={<Outreach />} />
+          <Route path="/sponsorship" element={<Sponsorship />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </SmoothScroll>
     </Router>
   );
 }
