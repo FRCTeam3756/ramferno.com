@@ -2,11 +2,51 @@
   position: relative;
   width: 100%;
   height: 24rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   overflow: hidden;
   cursor: pointer;
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 36%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  isolation: isolate;
+  transition: border-color 0.25s ease, filter 0.25s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  filter: saturate(1.08);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: auto 1rem 0.75rem;
+  height: 1.1rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.28);
+  filter: blur(14px);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.depthShadow {
+  position: absolute;
+  inset: 1rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.22));
+  transform: translateZ(-1px);
+  z-index: 0;
 }
 
 .image {
@@ -15,6 +55,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(1.02) contrast(1.02);
 }
 
 .addIcon {
@@ -25,6 +66,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.1), transparent 45%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  z-index: 1;
 }
 
 .overlayTop {
@@ -34,6 +79,34 @@
   height: 35%;
   width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+  z-index: 3;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.22), transparent 28%),
+    radial-gradient(circle at 82% 0%, rgba(255, 255, 255, 0.12), transparent 24%);
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.edgeLight {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.08) 14%,
+    transparent 32%,
+    transparent 70%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
 }
 
 .overlayBottom {
@@ -48,7 +121,7 @@
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-
+  z-index: 3;
 }
 
 .content {
@@ -65,6 +138,7 @@
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 1) 20%
   );
+  z-index: 4;
 }
 
 .header {
@@ -76,6 +150,8 @@
 .name {
   font-size: clamp(1.1rem, 2.5cqw, 1.5rem);
   font-weight: 700;
+  margin: 0;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
 .letter {
@@ -97,6 +173,8 @@
   font-size: 0.875rem;
   color: #fff;
   margin: 0;
+  line-height: 1.5;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 

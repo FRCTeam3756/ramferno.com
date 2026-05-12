@@ -16,16 +16,25 @@ export interface SponsorProfileProps {
 export function SponsorProfile({name, description, image, }: SponsorProfileProps) {
 
   const containerVariants: Variants = {
-    rest: { scale: 1, y: 0 },
+    rest: {
+      scale: 1,
+      y: 0,
+      rotateX: 0,
+      rotateY: 0,
+      boxShadow: "0 22px 42px rgba(0, 0, 0, 0.16)",
+    },
     hover: {
-          y: -4,
-          transition: { type: "spring", stiffness: 400, damping: 28, mass: 0.6 },
-        }
+      y: -8,
+      rotateX: 5,
+      rotateY: -5,
+      boxShadow: "0 34px 72px rgba(0, 0, 0, 0.26)",
+      transition: { type: "spring", stiffness: 260, damping: 24, mass: 0.8 },
+    }
   }
 
   const imageVariants: Variants = {
-    rest: { scale: 1 },
-    hover: { scale: 1.05 },
+    rest: { scale: 1, y: 0 },
+    hover: { scale: 1.08, y: -6 },
   }
 
   const contentVariants: Variants = {
@@ -71,10 +80,14 @@ export function SponsorProfile({name, description, image, }: SponsorProfileProps
       whileHover="hover"
       variants={containerVariants}
       className={styles.card}
+      style={{ transformStyle: "preserve-3d" }}
     >
+      <div className={styles.depthShadow} />
+
       {image ? (
         <motion.img
           src={image}
+          alt={name ? `${name} sponsor logo` : "Sponsor logo"}
           className={styles.image}
           variants={imageVariants}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -90,6 +103,8 @@ export function SponsorProfile({name, description, image, }: SponsorProfileProps
       )}
 
       <div className={styles.overlayTop} />
+      <div className={styles.glow} />
+      <div className={styles.edgeLight} />
       <div className={styles.overlayMid} />
       <div className={styles.overlayBottom} />
 

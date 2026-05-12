@@ -104,11 +104,16 @@ export default function Sponsorship() {
       <main>
         <div className={styles.container}>
           <div className={styles.title}>
-            <h1>Our Sponsors</h1>
+            <h1>Community Partners</h1>
+            <p className={styles.lead}>
+              These organizations help turn student ambition into real robots,
+              real competition experience, and real opportunities to grow.
+            </p>
           </div>
           <div className={styles.sponsorCards}>
             {sponsorProfilesList.map((sponsorProfile) => (
               <SponsorProfile
+                key={sponsorProfile.id}
                 name={sponsorProfile.name}
                 image={sponsorProfile.image}
                 description={sponsorProfile.description}
