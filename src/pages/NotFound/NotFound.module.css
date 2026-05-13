@@ -1,0 +1,28 @@
+.returnLink {
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.header {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
