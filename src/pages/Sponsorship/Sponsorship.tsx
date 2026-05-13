@@ -6,8 +6,8 @@ import Footer from "../../components/Global/Footer/Footer";
 import { Helmet } from "@vuer-ai/react-helmet-async";
 import { SponsorProfile } from "../../components/Sponsorship/SponsorProfile/SponsorProfile";
 
-import armoToolImage from "../../assets/images/sponsorship/armo_tool.png";
-import argosyImage from "../../assets/images/sponsorship/argosy.png";
+import armoToolImage from "../../assets/images/sponsorship/armo_tool-optimized.webp";
+import argosyImage from "../../assets/images/sponsorship/argosy-optimized.webp";
 import tvdsbImage from "../../assets/images/sponsorship/tvdsb.png";
 
 const sponsorProfilesList = [

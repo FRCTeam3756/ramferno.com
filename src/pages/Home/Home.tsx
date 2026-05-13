@@ -7,12 +7,12 @@ import Footer from "../../components/Global/Footer/Footer";
 
 import { Helmet } from "@vuer-ai/react-helmet-async";
 
-import teamworkGreyImg from "../../assets/images/home/values/teamwork_grey.webp";
-import teamworkImg from "../../assets/images/home/values/teamwork_color.webp";
-import coopertitionGreyImg from "../../assets/images/home/values/coopertition_grey.webp";
-import coopertitionImg from "../../assets/images/home/values/coopertition_color.webp";
-import leadershipGreyImg from "../../assets/images/home/values/leadership_grey.webp";
-import leadershipImg from "../../assets/images/home/values/leadership_color.webp";
+import teamworkGreyImg from "../../assets/images/home/values/teamwork_grey-optimized.webp";
+import teamworkImg from "../../assets/images/home/values/teamwork_color-optimized.webp";
+import coopertitionGreyImg from "../../assets/images/home/values/coopertition_grey-optimized.webp";
+import coopertitionImg from "../../assets/images/home/values/coopertition_color-optimized.webp";
+import leadershipGreyImg from "../../assets/images/home/values/leadership_grey-optimized.webp";
+import leadershipImg from "../../assets/images/home/values/leadership_color-optimized.webp";
 
 const values = [
   {

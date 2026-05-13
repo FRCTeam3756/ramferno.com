@@ -1,27 +1,31 @@
+import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home/Home";
-import Contact from "./pages/Contact/Contact";
-import Robots from "./pages/Robots/Robots";
-import Outreach from "./pages/Outreach/Outreach";
-import Sponsorship from "./pages/Sponsorship/Sponsorship";
-import NotFound from "./pages/NotFound/NotFound";
 import SmoothScroll from "./components/Global/SmoothScroll/SmoothScroll";
 
 import './styles.css';
+
+const Home = lazy(() => import("./pages/Home/Home"));
+const Contact = lazy(() => import("./pages/Contact/Contact"));
+const Robots = lazy(() => import("./pages/Robots/Robots"));
+const Outreach = lazy(() => import("./pages/Outreach/Outreach"));
+const Sponsorship = lazy(() => import("./pages/Sponsorship/Sponsorship"));
+const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 export default function App() {
   return (
     <Router>
       <SmoothScroll>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/robots" element={<Robots />} />
-          <Route path="/outreach" element={<Outreach />} />
-          <Route path="/sponsorship" element={<Sponsorship />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/robots" element={<Robots />} />
+            <Route path="/outreach" element={<Outreach />} />
+            <Route path="/sponsorship" element={<Sponsorship />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </SmoothScroll>
     </Router>
   );

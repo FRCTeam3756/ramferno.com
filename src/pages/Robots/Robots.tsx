@@ -5,9 +5,9 @@ import Footer from "../../components/Global/Footer/Footer";
 
 import { Helmet } from "@vuer-ai/react-helmet-async";
 
-import chargedUpPhoto from "../../assets/images/robots/chargedUpPhoto.webp";
+import chargedUpPhoto from "../../assets/images/robots/chargedUpPhoto-optimized.webp";
 import crescendoPhoto from "../../assets/images/robots/crescendoPhoto.webp";
-import reefscapePhoto from "../../assets/images/robots/reefscapePhoto.webp";
+import reefscapePhoto from "../../assets/images/robots/reefscapePhoto-optimized.webp";
 import rebuiltPhoto from "../../assets/images/robots/rebuiltPhoto.jpeg";
 import RobotScroller from "../../components/Robots/RobotScroller/RobotScroller";
 
