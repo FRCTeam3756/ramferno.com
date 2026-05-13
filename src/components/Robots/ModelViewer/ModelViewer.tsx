@@ -1,7 +1,7 @@
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
-import * as THREE from "three";
+import { Object3D, Vector3 } from "three";
 // import styles from './ModelViewer.module.css'
 
 
@@ -10,7 +10,7 @@ interface ModelProps {
 }
 
 function Model({ modelUrl }: ModelProps) {
-  const modelRef = useRef<THREE.Object3D>(null!);
+  const modelRef = useRef<Object3D>(null!);
   const targetRotationY = useRef(0);
 
   useFrame((state, delta) => {
@@ -23,8 +23,8 @@ function Model({ modelUrl }: ModelProps) {
       modelRef.current.rotation.y += diff * 0.1;
     }
 
-    const idealPos = new THREE.Vector3(0, 1.5, 3);
-    const target = new THREE.Vector3(0, 0.5, 0);
+    const idealPos = new Vector3(0, 1.5, 3);
+    const target = new Vector3(0, 0.5, 0);
     state.camera.position.lerp(idealPos, 0.02);
     state.camera.lookAt(target);
   });
