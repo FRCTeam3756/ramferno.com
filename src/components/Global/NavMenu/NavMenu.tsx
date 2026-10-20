@@ -1,6 +1,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { FaTwitter, FaInstagram, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import logoUrl from "../../../assets/images/global/navbar/brand.webp";
 import styles from "./NavMenu.module.css";
 import type { IconType } from "react-icons";
@@ -15,7 +16,7 @@ const menuItems = [
 ];
 
 const socialItems = [
-  { icon: FaTwitter, link: "https://twitter.com/ramferno3756" },
+  { icon: FaXTwitter, link: "https://x.com/ramferno3756" },
   { icon: FaInstagram, link: "https://www.instagram.com/3756ramferno/" },
   { icon: FaFacebook, link: "https://www.facebook.com/3756RamFerno/" },
   { icon: FaGithub, link: "https://github.com/FRCTeam3756" },
