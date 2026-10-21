@@ -1,98 +1,74 @@
-.profileGrid {
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-@media (max-width: 500px) {
-    .profileGrid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (min-width: 1200px) {
-    .profileGrid {
-        gap: 40px;
-    }
-}
-
-
-.sectionHeader {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 3rem;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.sectionHeader h1,
-.sectionHeader h2 {
-  margin: 0.5rem 0;
-}
-
-.sectionHeader h1 {
-  position: absolute;
-  top: 0px;
-  color: var(--transparent-grey);
-  z-index: -1;
-  font-weight: 900;
-  font-size: 4rem;
-}
-
-.sectionHeader h2 {
-  color: white;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-/* Phone (max-width: 767.98px) */
-@media (max-width: 767.98px) {
-  .sectionHeader h1 {
-    font-size: 3rem;
-  }
-
-  .sectionHeader h2 {
-    font-size: 2.4rem;
-  }
-}
-
-.contactSection {
-  padding-top: 7em;
-  position: relative;
-}
-
-@media (max-width: 767.98px) {
-  .contactSection {
-    padding-top: 6em;
-  }
-}
-
 .container {
-  width: 100%;
-  display: flex;
-  margin-top: 12vh;
-  flex-wrap: wrap;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
+  --tree-line: #765139;
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 8rem 0 4rem;
+  color: #fff;
 }
 
-@media (max-width: 991.98px) {
-  .container {
-    max-width: 90vw;
-  }
+.sectionHeader { text-align: center; margin-bottom: 3.5rem; }
+.eyebrow { color: #ffa45b; text-transform: uppercase; letter-spacing: .16em; font-size: .75rem; font-weight: 700; }
+.sectionHeader h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin: .6rem 0 1rem; line-height: 1.1; }
+.sectionHeader > p:not(.eyebrow) { color: #c5c3c1; }
+.contactLink { display: inline-flex; gap: 2rem; padding: .8rem 1.25rem; margin-top: 1rem; border-radius: 8px; background: #fa842d; color: #17110d; font-weight: 700; text-decoration: none; }
+.contactLink:hover { background: #ffad6e; }
+.tree ul { list-style: none; margin: 0; padding: 0; }
+.tierHeading { font-size: .8rem; text-transform: uppercase; letter-spacing: .16em; color: #c5c3c1; text-align: center; margin: 0 0 1.5rem; }
+.mentors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.mentor { position: relative; padding: 1.5rem; background: #1c1b1a; border: 1px solid #49403a; border-radius: 12px; }
+.leadMentor { border-color: #fa842d; background: linear-gradient(145deg, #3a291c, #1c1b1a); }
+.person { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.avatar, .avatarPlaceholder { width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0; background: #302b27; border: 1px solid #655243; }
+.avatar { object-fit: cover; object-position: top; }
+.avatarPlaceholder { display: grid; place-items: center; color: #b9a18e; }
+.avatarPlaceholder svg { width: 28px; height: 28px; }
+.personDetails { min-width: 0; overflow-wrap: anywhere; }
+.role { color: #ffb37a; font-size: .75rem; margin: 0 0 .35rem; }
+.name { font-size: 1.05rem; font-weight: 700; margin: 0; }
+.person a { display: inline-block; font-size: .75rem; color: #c9c4bf; margin-top: .5rem; text-underline-offset: 4px; }
+.container a:focus-visible { outline: 2px solid #ffb37a; outline-offset: 5px; }
+/* All three mentors join the student leadership branch. */
+.mentor::after { content: ''; position: absolute; height: 25px; width: 1px; background: var(--tree-line); top: 100%; left: 50%; }
+.students { position: relative; padding-top: 50px; }
+.students::before { content: ''; position: absolute; top: 24px; height: 1px; left: calc((100% - 3rem) / 6); right: calc((100% - 3rem) / 6); background: var(--tree-line); }
+.leadership { position: relative; width: min(620px, 100%); box-sizing: border-box; margin: 0 auto; border: 1px solid #765139; border-radius: 12px; padding: 1.5rem; background: #211c18; }
+.leadership::before { content: ''; position: absolute; width: 1px; height: 26px; bottom: 100%; left: 50%; background: var(--tree-line); }
+.leadership > .eyebrow, .leadership > h2 { text-align: center; }
+.leadership h2 { margin: .5rem 0 1.5rem; font-size: 1.5rem; }
+.leaders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.subteamSection { position: relative; padding-top: 65px; }
+.subteamSection::before { content: ''; position: absolute; height: 45px; width: 1px; background: var(--tree-line); top: 0; left: 50%; }
+.subteams { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem 1.5rem; }
+.subteam { position: relative; padding: 1.5rem; border: 1px solid #49403a; border-top: 2px solid #d47b39; border-radius: 10px; background: #1c1b1a; }
+.subteam::before { content: ''; position: absolute; height: 18px; width: 1px; background: var(--tree-line); bottom: 100%; left: 50%; }
+.subteam h4 { font-size: 1.15rem; margin: 0; }
+.description { color: #bcb6b1; font-size: .85rem; line-height: 1.6; margin: .65rem 0 1.25rem; }
+.captains { display: grid; gap: 1rem; border-top: 1px solid #3e3731; padding-top: 1rem !important; }
+.subteam .avatar, .subteam .avatarPlaceholder { width: 40px; height: 40px; }
+.subteam .name { font-size: .9rem; }
+.rosterNote { color: #aaa19a; text-align: center; font-size: .8rem; line-height: 1.6; margin: 2rem auto 0; }
+@media (max-width: 1000px) {
+  .mentor { padding: 1.25rem .75rem; }
+  .mentor .person { flex-direction: column; text-align: center; }
+  .subteams { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .container { width: 92%; padding-top: 7rem; }
+  .mentors { gap: .5rem; }
+  .mentor { padding: 1rem .35rem; }
+  .mentor .name { font-size: .9rem; }
+  .mentor .role, .mentor .person a { font-size: .65rem; }
+  .students::before { left: calc((100% - 1rem) / 6); right: calc((100% - 1rem) / 6); }
+  .leaders { grid-template-columns: 1fr; }
+  .subteams { grid-template-columns: 1fr; margin-left: 12px !important; padding-left: 20px !important; border-left: 1px solid var(--tree-line); gap: 1rem; }
+  .subteam::before { width: 21px; height: 1px; left: -21px; top: 50%; }
+  .subteamSection::after { content: ''; position: absolute; height: 1px; background: var(--tree-line); top: 45px; left: 12px; right: 50%; }
+  .subteams::before { content: ''; position: absolute; top: 45px; left: 12px; width: 1px; height: 59px; background: var(--tree-line); }
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 85vw;
-  }
+@media (min-width: 601px) {
+  .subteams { position: relative; border-left: 1px solid var(--tree-line); padding-left: 20px !important; margin-left: 12px !important; }
+  .subteam::after { content: ''; position: absolute; height: 1px; background: var(--tree-line); top: -19px; left: -22px; width: calc(100% + 26px); }
+  .subteamSection::after { content: ''; position: absolute; height: 1px; background: var(--tree-line); top: 45px; left: 12px; right: 50%; }
+  .subteams::before { content: ''; position: absolute; bottom: 100%; left: -1px; width: 1px; height: 59px; background: var(--tree-line); }
 }

@@ -1,89 +1,83 @@
-import styles from "./Contact.module.css"
-
+import styles from './Contact.module.css';
 import NavMenu from '../../components/Global/NavMenu/NavMenu';
 import Footer from '../../components/Global/Footer/Footer';
-import ProfileCard from "../../components/Contact/ProfileCard/ProfileCard";
+import { Helmet } from '@vuer-ai/react-helmet-async';
+import { mentors, studentLeaders, subteams, teamEmail, type TeamPerson } from './teamData';
 
-import cooperImg from '../../assets/images/contact/cooper.webp'
-import mironImg from '../../assets/images/contact/miron.webp'
-import rhigerImg from '../../assets/images/contact/rhiger.webp'
-import studentsImg from '../../assets/images/contact/students.webp'
-
-import { Helmet } from "@vuer-ai/react-helmet-async";
-
-interface ProjectCardProps {
-  id: number;
-  name: string;
-  email: string;
-  jobTitle: string;
-  roboticsTitle: string;
-  headshot: string
+function Person({ person }: { person: TeamPerson }) {
+  return (
+    <div className={styles.person}>
+      {person.headshot ? (
+        <img className={styles.avatar} src={person.headshot} alt="" />
+      ) : (
+        <span className={styles.avatarPlaceholder} aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <circle cx="12" cy="8" r="3.5" />
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" />
+          </svg>
+        </span>
+      )}
+      <div className={styles.personDetails}>
+        <p className={styles.role}>{person.role}</p>
+        <p className={styles.name}>{person.name}</p>
+        {person.email && <a href={`mailto:${person.email}`}>Email {person.name}</a>}
+      </div>
+    </div>
+  );
 }
-
-const profileList: ProjectCardProps[] = [
-  {
-    id: 0,
-    name: "Mr. Cooper",
-    email: "tv40175@gotvdsb.ca",
-    jobTitle: "Science Dept. Head",
-    roboticsTitle: "Lead Mentor",
-    headshot: cooperImg
-  },
-  {
-    id: 1,
-    name: "Mr. Miron",
-    email: "tv49290@gotvdsb.ca",
-    jobTitle: "Technology Dept. Head",
-    roboticsTitle: "Manufacturing Mentor",
-    headshot: mironImg
-  },
-  {
-    id: 2,
-    name: "Mr. Rhiger",
-    email: "tv51980@gotvdsb.ca",
-    jobTitle: "Business Dept. Head",
-    roboticsTitle: "Software Mentor",
-    headshot: rhigerImg
-  },
-  {
-    id: 2,
-    name: "Gabe & Maddox",
-    email: "contact@ramferno.com",
-    jobTitle: "Student Leaders",
-    roboticsTitle: "Leadership Team",
-    headshot: studentsImg
-  }  
-];
 
 export default function Contact() {
   return (
     <>
       <Helmet>
         <title>Contact | RamFerno Robotics</title>
-        <meta name="description" content="RamFerno Robotics from Sir Wilfrid Laurier S.S. inspires students through FIRST competition, outreach, and STEM education." />
+        <meta name="description" content="Meet RamFerno Robotics’ mentors, student leaders, and subteam captains. Get in touch with our team." />
       </Helmet>
-      <section id="contact" className={styles.section}>
-        <NavMenu />
-        <div className={styles.container}>
-          <header className={styles.sectionHeader}>
-            <h1>Contact</h1>
-            <h2>Contact</h2>
-          </header>
+      <NavMenu />
+      <main id="contact" className={styles.container}>
+        <header className={styles.sectionHeader}>
+          <p className={styles.eyebrow}>The people behind the robot</p>
+          <h1>Contact our team</h1>
+          <p>General inquiries should be made out to contact@ramferno.com</p>
+          <a className={styles.contactLink} href={`mailto:${teamEmail}`}>Get in touch <span aria-hidden="true">↗</span></a>
+        </header>
 
-          <div className={styles.profileGrid}>
-            {profileList.map((profile) => (
-              <ProfileCard
-                name={profile.name}
-                email={profile.email}
-                jobTitle={profile.jobTitle}
-                roboticsTitle={profile.roboticsTitle}
-                headshot={profile.headshot}
-              />
+        <section aria-labelledby="mentors-heading" className={styles.tree}>
+          <h2 id="mentors-heading" className={styles.tierHeading}>Mentors</h2>
+          <ul className={styles.mentors}>
+            {(['left', 'center', 'right'] as const).map((position) => (
+              <li key={mentors[position].id} className={`${styles.mentor} ${position === 'center' ? styles.leadMentor : ''}`}>
+                <Person person={mentors[position]} />
+              </li>
             ))}
-          </div>
-        </div>
-        <Footer />
-      </section>
+          </ul>
+
+          <section aria-labelledby="students-heading" className={styles.students}>
+            <div className={styles.leadership}>
+              <p className={styles.eyebrow}>Student-led, always</p>
+              <h2 id="students-heading">Student leadership</h2>
+              <ul className={styles.leaders}>
+                {studentLeaders.map((person) => <li key={person.id}><Person person={person} /></li>)}
+              </ul>
+            </div>
+            <section aria-labelledby="subteams-heading" className={styles.subteamSection}>
+              <h3 id="subteams-heading" className={styles.tierHeading}>Subteams & captains</h3>
+              <ul className={styles.subteams}>
+                {subteams.map((subteam) => (
+                  <li key={subteam.id} className={styles.subteam}>
+                    <h4>{subteam.name}</h4>
+                    <p className={styles.description}>{subteam.description}</p>
+                    <ul className={styles.captains}>
+                      {subteam.captains.map((person) => <li key={person.id}><Person person={person} /></li>)}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </section>
+        </section>
+      </main>
+      <Footer />
     </>
   );
-};
+}
