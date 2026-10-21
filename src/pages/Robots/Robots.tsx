@@ -14,6 +14,8 @@ import RobotScroller from "../../components/Robots/RobotScroller/RobotScroller";
 const values = [
   {
     id: 0,
+    season: "2026",
+    competitions: ["University of Waterloo", "Windsor Essex Great Lake", "Provincial Championship"],
     subheading: "FIRST® Rebuilt",
     heading: "Jean Gray",
     alt: "Rebuilt Image",
@@ -25,11 +27,13 @@ const values = [
       "Ranked 36th in Ontario with 149 Points",
       "Won Windsor Innovation in Control Award",
       "Ontario Provincial Judges Award Winner",
-      "Placed Fourth in the DCMP Science Field Playoffs"
+      "Placed Fourth in the DCMP1 Playoffs"
     ],
   },
   {
     id: 1,
+    season: "2025",
+    competitions: ["North Bay", "Windsor Essex Great Lake", "Provincial Championship"],
     subheading: "FIRST® Reefscape",
     heading: "Low Rider",
     alt: "Reefscape Image",
@@ -45,6 +49,8 @@ const values = [
   },
   {
     id: 2,
+    season: "2024",
+    competitions: ["University of Waterloo", "Windsor Essex Great Lake", "Provincial Championship"],
     subheading: "FIRST® Crescendo",
     heading: "RamJam",
     alt: "Crescendo Image",
@@ -60,6 +66,8 @@ const values = [
   },
   {
     id: 3,
+    season: "2023",
+    competitions: ["Western University", "University of Waterloo"],
     subheading: "FIRST® Charged Up",
     heading: "CeeCee",
     alt: "Charged Up Image",
@@ -91,6 +99,8 @@ export default function Robots() {
           {values.map((value) => (
             <RobotScroller
               key={value.id}
+              season={value.season}
+              competitions={value.competitions}
               subheading={value.subheading}
               heading={value.heading}
               image={value.image}

@@ -28,12 +28,6 @@
   background-color: #0a0a0ab3;
 }
 
-.textColumn {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-
 .overlayCopy {
   position: absolute;
   left: 0;
@@ -64,205 +58,223 @@
 }
 
 .contentRibbon {
-  width: 100%;
-  background:
-    linear-gradient(180deg, #050505 0%, #090909 100%);
-  margin-bottom: 2em;
+  padding: 0 0 clamp(4rem, 8vw, 8rem);
 }
 
 .contentCard {
+  width: min(85vw, 1280px);
+  margin: 0 auto;
   display: grid;
-  max-width: 85vw;
-  justify-self: center;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  column-gap: 1.5rem;
-  row-gap: 1.5rem;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 40%),
-    linear-gradient(145deg, rgba(20, 20, 20, 0.98), rgba(10, 10, 10, 0.96));
-  box-shadow:
-    0 24px 70px rgba(0, 0, 0, 0.28);
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 2rem clamp(2rem, 5vw, 5rem);
 }
 
-.detailsColumn {
-  display: grid;
-  gap: 1rem;
-}
-
-.visualPanel,
-.infoPanel {
+.cardHeader {
+  grid-column: 1 / -1;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.25rem;
-  border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
-  min-width: 0;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 0 1.75rem;
+  border-bottom: 1px solid #383838;
 }
 
-.panelHeader {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.panelEyebrow {
-  margin: 0;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.seasonGame {
+  margin: 0 0 0.65rem;
+  color: var(--primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #f2a65a;
 }
 
-.panelTitle {
+.robotName {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.seasonYear {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin: 0;
+  color: var(--primary);
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-variant-numeric: tabular-nums;
   line-height: 1.2;
-  color: #fff9ef;
 }
 
-.panelSubtitle {
+.seasonYear span {
+  margin-bottom: 0.5rem;
+  color: var(--grey);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.visualPanel {
+  min-width: 0;
   margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.72);
 }
 
 .mediaColumn {
-  min-height: 18rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: clamp(20rem, 32vw, 27rem);
   overflow: hidden;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 50%),
-    #151515;
-  border-radius: 1.5em;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #101010;
+  border-radius: 3px;
 }
 
-.mediaPlaceholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modelStage,
+.robotPhoto {
+  display: block;
   width: 100%;
-  min-height: inherit;
-  padding: 1.5rem;
+  height: 100%;
+}
+
+.robotPhoto {
+  object-fit: cover;
+  object-position: center;
+}
+
+.mediaCaption {
   text-align: center;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  padding-top: 0.8rem;
+  color: var(--grey);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+}
 
-  width: 100%;
-  height: 2.5rem;
-  padding: 0 1rem;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-
-  font-size: 0.875rem;
+.sectionTitle {
+  margin: 0 0 0.75rem;
+  color: var(--grey);
+  font-size: 0.7rem;
   font-weight: 500;
-  border-radius: 0.375rem;
-
-  background-color: rgba(255, 255, 255, 0.04);
-  color: white;
-
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.2s ease;
-}
-
-.button:hover {
-  background-color: color-mix(in srgb, #414141 90%, black);
-}
-
-.button:disabled {
-  cursor: not-allowed;
-}
-
-.label {
-  white-space: nowrap;
-}
-
-.iconWrapper {
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-
-  display: inline-flex;
-  align-items: center;
-
-  transform: translateX(100%);
-  transition:
-    width 0.2s ease,
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    padding-left 0.2s ease;
-}
-
-.button:hover .iconWrapper {
-  width: 1.25rem;
-  opacity: 1;
-  transform: translateX(0);
-  padding-left: 0.5rem;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .accomplishmentList {
   list-style: none;
-  display: grid;
-  gap: 0.75rem;
   margin: 0;
   padding: 0;
 }
 
 .accomplishmentItem {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: 0.75rem;
-  padding: 0.85rem 0.95rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.84);
+  position: relative;
+  padding: 1rem 0 1rem 1.15rem;
+  border-bottom: 1px solid #282828;
+  color: var(--white);
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  line-height: 1.55;
 }
 
-.accomplishmentIcon {
-  display: inline-flex;
+.accomplishmentItem::before {
+  content: "";
+  position: absolute;
+  top: 1.65rem;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: var(--primary);
+}
+
+.resources {
+  margin-top: auto;
+}
+
+.actions {
+  border-top: 1px solid #383838;
+}
+
+.resourceLink,
+.unavailable {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  color: #f2a65a;
-  margin-top: 0.1rem;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.5rem;
+  margin: 0;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #383838;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.resourceLink {
+  color: var(--white);
+  transition: color 180ms ease;
+}
+
+.resourceLink svg {
+  flex-shrink: 0;
+  color: var(--primary);
+  transition: transform 180ms ease;
+}
+
+.resourceLink:hover {
+  color: var(--primary);
+}
+
+.resourceLink:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.resourceLink:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.linkDetail,
+.unavailable {
+  color: var(--grey);
+}
+
+.unavailable span {
+  font-size: 0.75rem;
 }
 
 @media (max-width: 767.98px) {
   .contentCard {
+    width: calc(100% - 24px);
     grid-template-columns: 1fr;
-    max-width: calc(100vw - 24px);
-    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .cardHeader {
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .seasonGame {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  .robotName {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .seasonYear {
+    font-size: 1.5rem;
   }
 
   .mediaColumn {
-    min-height: 14rem;
+    height: clamp(17rem, 65vw, 25rem);
   }
 }
 
 @media (min-width: 768px) {
-  .contentCard {
-    align-items: stretch;
-  }
-
   .subheading {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -272,9 +284,11 @@
     font-size: 4.5rem;
     line-height: 1;
   }
+}
 
-  .detailsColumn {
-    grid-template-rows: auto 1fr;
-    align-content: start;
+@media (prefers-reduced-motion: reduce) {
+  .resourceLink,
+  .resourceLink svg {
+    transition: none;
   }
 }
