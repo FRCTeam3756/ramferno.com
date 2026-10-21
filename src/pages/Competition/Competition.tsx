@@ -38,6 +38,7 @@ export default function Competition() {
       <NavMenu />
       <main id="competition" className={styles.main}>
         <header className={styles.hero}>
+          <img className={styles.heroBackdrop} src={background} alt="" aria-hidden="true" />
           <img className={styles.heroImage} src={background} alt="" fetchPriority="high"/>
           <div className={styles.heroCopy}>
             <h1>Built to compete.<br />Ready to collaborate.</h1>

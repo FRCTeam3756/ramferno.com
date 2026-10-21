@@ -28,6 +28,36 @@
   object-position: center;
 }
 
+.heroBackdrop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .heroBackdrop {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(28px);
+    transform: scale(1.08);
+    z-index: -2;
+    pointer-events: none;
+  }
+
+  .heroImage {
+    inset: 50% auto auto 50%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
+
 .hero::after {
   content: "";
   background: linear-gradient(90deg, #000d, #0008 65%, #0005), linear-gradient(0deg, #0009, transparent 50%);
