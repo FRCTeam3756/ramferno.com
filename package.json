@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "postbuild": "tsx scripts/generate-sitemap.ts",
+    "prebuild": "node --import tsx scripts/generate-sitemap.ts",
     "preview": "npm run build && vite preview",
     "deploy": "npm run build && wrangler deploy"
   },

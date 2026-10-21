@@ -6,6 +6,7 @@ const DOMAIN = "https://www.ramferno.com";
 export const routes = [
   "/",
   "/robots",
+  "/competition",
   "/outreach",
   "/sponsorship",
   "/contact",

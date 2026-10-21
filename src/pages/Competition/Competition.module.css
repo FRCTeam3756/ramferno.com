@@ -1,0 +1,371 @@
+.main {
+  padding: 12px;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - 24px);
+  padding: 7rem max(24px, calc((100% - min(85vw, 1280px)) / 2));
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #101010;
+}
+
+.heroImage,
+.hero::after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: "";
+  background: linear-gradient(90deg, #000d, #0008 65%, #0005), linear-gradient(0deg, #0009, transparent 50%);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(2.75rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: -0.045em;
+}
+
+.heroDescription {
+  margin: 1.75rem 0 2rem;
+  color: #e0e0e0;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
+
+.heroLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 44px;
+  border-bottom: 1px solid #ffffff70;
+  font-size: 0.9rem;
+}
+
+.heroLink svg,
+.resourceLink svg {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.photoLabel {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: #d0d0d0;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.section {
+  width: min(85vw, 1280px);
+  margin: clamp(4rem, 8vw, 8rem) auto;
+  scroll-margin-top: 7rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1.5rem;
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #383838;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.sectionLabel,
+.seasonYear span {
+  color: var(--grey);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.twoColumns p {
+  margin-top: 0;
+}
+
+.lead {
+  color: var(--white);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.introduction strong {
+  color: #dedede;
+  font-weight: 500;
+}
+
+.introduction .resourceLink {
+  margin-top: 2rem;
+  border-top: 1px solid #383838;
+}
+
+.steps,
+.objectives,
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.steps li {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #282828;
+}
+
+.steps li:first-child {
+  padding-top: 0;
+}
+
+.stepNumber {
+  color: var(--primary);
+  font-size: 0.8rem;
+  padding-top: 0.25rem;
+}
+
+.steps h3,
+.objectives h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.steps p,
+.objectives p,
+.timeline p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.seasonYear {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--primary);
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  line-height: 1.2;
+}
+
+.trademark {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.3rem 0 0 0.25rem;
+  font-size: 0.3em;
+  letter-spacing: 0;
+}
+
+.gamePhoto {
+  min-width: 0;
+  margin: 0;
+}
+
+.gamePhoto img {
+  display: block;
+  width: 100%;
+  height: clamp(22rem, 38vw, 35rem);
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.gamePhoto figcaption {
+  padding-top: 0.8rem;
+  text-align: center;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.objectives li {
+  position: relative;
+  padding: 1rem 0 1rem 1.15rem;
+  border-bottom: 1px solid #282828;
+}
+
+.objectives li::before {
+  content: "";
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: var(--primary);
+}
+
+.matchHeader {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.matchHeader h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+}
+
+.matchHeader p {
+  font-size: 0.8rem;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.timeline li {
+  padding-top: 1rem;
+  border-top: 2px solid var(--primary);
+}
+
+.duration {
+  color: var(--primary);
+  font-size: 1.75rem;
+  letter-spacing: -0.04em;
+}
+
+.timeline h4 {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.rankingNote {
+  max-width: 75ch;
+  margin: 2rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid #383838;
+  font-size: 0.85rem;
+}
+
+.resources {
+  margin-top: 3rem;
+}
+
+.resourceLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.5rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #383838;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.main a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 5px;
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 7rem 24px;
+  }
+
+  .hero .eyebrow {
+    max-width: 25ch;
+  }
+
+  .section {
+    width: calc(100% - 24px);
+  }
+
+  .sectionHeader {
+    gap: 1rem;
+  }
+
+  .sectionLabel {
+    display: none;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  .twoColumns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gamePhoto img {
+    height: auto;
+  }
+
+  .matchHeader {
+    display: block;
+    margin-top: 3rem;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1.5rem;
+  }
+
+  .seasonYear {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main a {
+    transition: none;
+  }
+}
