@@ -1,7 +1,102 @@
 .footer {
-    width: 100%;
-    display: flex;
-    margin-top: 1.5rem;
-    text-align: center;
-    justify-content: center;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid var(--transparent-grey);
+  background: var(--black);
+}
+
+.inner {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.topRow,
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.brand img {
+  display: block;
+  object-fit: contain;
+}
+
+.socials {
+  padding: 0;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.navigation {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: 0.5rem 2rem;
+  padding: 0;
+}
+
+.navigation a {
+  padding: 0.5rem 0;
+}
+
+.footer a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.bottomRow {
+  margin-top: 2rem;
+  border-top: 1px solid var(--transparent-grey);
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.copyright {
+  flex-shrink: 0;
+}
+
+.bottomRow p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .inner {
+    width: 90%;
+  }
+
+  .topRow {
+    flex-wrap: wrap;
+  }
+
+  .socials {
+    margin-left: auto;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
