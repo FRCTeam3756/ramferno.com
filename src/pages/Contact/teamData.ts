@@ -50,8 +50,8 @@ export const mentors: Record<"left" | "center" | "right", TeamPerson> = {
 
 export const teamEmail = "contact@ramferno.com";
 export const studentLeaders: TeamPerson[] = [
-  { id: "student-lead-1", name: "Ethan M", role: "Student Co-Captain" },
-  { id: "student-lead-2", name: "Ibrahim", role: "Student Co-Captain" },
+  { id: "student-lead-1", name: "Ethan M", role: "Student Co-Captain", headshot: ethanmImg },
+  { id: "student-lead-2", name: "Ibrahim", role: "Student Co-Captain", headshot: ibrahimImg },
 ];
 
 //Assembly: Jacob + Tyler Manufacturing: Curtis  Electrical: Ethan M (For now) Digital Media: Kiril Business: Alyssa
