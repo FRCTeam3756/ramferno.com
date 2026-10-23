@@ -43,16 +43,6 @@ const sponsorProfilesList = [
     facebook: "https://www.facebook.com/argosyfoundation/",
     twitter: "https://www.x.com/ArgosyFound",
   },
-  {
-    id: 3,
-    name: "Your Business Here!",
-    description: "",
-    image: undefined,
-    website: "",
-    instagram: "",
-    facebook: "",
-    twitter: "",
-  },
 ];
 
 const sponsorNamesList = [
@@ -101,14 +91,22 @@ export default function Sponsorship() {
         />
       </Helmet>
       <NavMenu />
-      <main>
-        <div className={styles.container}>
-          <div className={styles.title}>
-            <h1>Community Partners</h1>
-            <p className={styles.lead}>
-              These organizations help turn student ambition into real robots,
-              real competition experience, and real opportunities to grow.
-            </p>
+      <main className={styles.container}>
+        <header className={styles.title}>
+          <p className={styles.eyebrow}>Together, we build what’s next</p>
+          <h1>Community Partners</h1>
+          <p className={styles.lead}>
+            These organizations help turn student ambition into real robots,
+            real competition experience, and real opportunities to grow.
+          </p>
+          <a className={styles.contactLink} href="mailto:contact@ramferno.com">
+            Become a sponsor <span aria-hidden="true">↗</span>
+          </a>
+        </header>
+        <section aria-labelledby="partners-heading">
+          <div className={styles.sectionHeader}>
+            <h2 id="partners-heading">Our partners</h2>
+            <span className={styles.sectionLabel}>Backing the next generation</span>
           </div>
           <div className={styles.sponsorCards}>
             {sponsorProfilesList.map((sponsorProfile) => (
@@ -124,21 +122,20 @@ export default function Sponsorship() {
               />
             ))}
           </div>
-        </div>
-        <div className={styles.supporterSection}>
-          <div className={styles.supporterDivider}>
-            <p className={styles.supporterLabel}>Community supporters</p>
-            <div className={styles.supporterLine} />
+        </section>
+        <section className={styles.supporterSection} aria-labelledby="supporters-heading">
+          <div className={styles.sectionHeader}>
+            <h2 id="supporters-heading">Community supporters</h2>
           </div>
-          <div className={styles.supporterList}>
+          <p className={styles.supporterIntro}>Thank you to the businesses and families helping our team learn, build, and compete.</p>
+          <ul className={styles.supporterList}>
             {sponsorNamesList.map((s) => (
-              <div key={s.id} className={styles.supporterPill}>
-                <span className={styles.supporterDot} />
+              <li key={s.id} className={styles.supporterName}>
                 {s.name}
-              </div>
+              </li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </section>
       </main>
       <Footer />
     </>
