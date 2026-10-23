@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css";
-import heroBackground from "../../../assets/images/home/hero/background.webp";
+import heroBackground from "../../../assets/home/hero/background.webp";
 
 export default function Hero() {
   return (

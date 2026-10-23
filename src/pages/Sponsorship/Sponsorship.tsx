@@ -6,9 +6,9 @@ import Footer from "../../components/Global/Footer/Footer";
 import { Helmet } from "@vuer-ai/react-helmet-async";
 import { SponsorProfile } from "../../components/Sponsorship/SponsorProfile/SponsorProfile";
 
-import armoToolImage from "../../assets/images/sponsorship/armo_tool-optimized.webp";
-import argosyImage from "../../assets/images/sponsorship/argosy-optimized.webp";
-import tvdsbImage from "../../assets/images/sponsorship/tvdsb.png";
+import armoToolImage from "../../assets/sponsorship/armo_tool.webp";
+import argosyImage from "../../assets/sponsorship/argosy.webp";
+import tvdsbImage from "../../assets/sponsorship/tvdsb.webp";
 
 const sponsorProfilesList = [
   {
@@ -87,7 +87,7 @@ const sponsorNamesList = [
   {
     id: 7,
     name: "MacDonell-Lynch Family",
-  }
+  },
 ];
 
 export default function Sponsorship() {

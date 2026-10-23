@@ -2,7 +2,7 @@ import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { FaInstagram, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import logoUrl from "../../../assets/images/global/navbar/brand.webp";
+import logoUrl from "../../../assets/global/navbar/brand.webp";
 import styles from "./NavMenu.module.css";
 import type { IconType } from "react-icons";
 
