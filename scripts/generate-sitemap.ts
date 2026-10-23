@@ -7,7 +7,6 @@ export const routes = [
   "/",
   "/robots",
   "/competition",
-  "/outreach",
   "/sponsorship",
   "/contact",
 ];

@@ -3,7 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import logoUrl from "../../../assets/global/footer/logo.webp";
 import styles from "./Footer.module.css";
 
-const pages = ["Robots", "Outreach", "Competition", "Sponsorship", "Contact"];
+const pages = ["Robots", "Competition", "Sponsorship", "Contact"];
 const socials = [
   { label: "X", icon: FaXTwitter, href: "https://x.com/ramferno3756" },
   {

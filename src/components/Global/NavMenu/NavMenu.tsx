@@ -9,7 +9,6 @@ import type { IconType } from "react-icons";
 const menuItems = [
   { label: "Home", link: "/" },
   { label: "Robots", link: "/robots" },
-  { label: "Outreach", link: "/outreach" },
   { label: "Competition", link: "/competition" },
   { label: "Sponsorship", link: "/sponsorship" },
   { label: "Contact", link: "/contact" },

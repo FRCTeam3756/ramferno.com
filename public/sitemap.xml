@@ -3,32 +3,27 @@
 
   <url>
     <loc>https://www.ramferno.com/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.ramferno.com/robots</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ramferno.com/competition</loc>
-    <lastmod>2026-10-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.ramferno.com/outreach</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ramferno.com/sponsorship</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ramferno.com/contact</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
