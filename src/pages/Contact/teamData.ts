@@ -1,13 +1,13 @@
 import cooperImg from "../../assets/contact/cooper.webp";
 import mironImg from "../../assets/contact/miron.webp";
-import michaelImg from "../../assets/contact/michael.jpeg"
-import curtisImg from "../../assets/contact/curtis.jpeg"
-import ethanmImg from "../../assets/contact/ethan_m.jpeg"
-import ibrahimImg from "../../assets/contact/ibrahim.jpeg"
-import jacobImg from "../../assets/contact/jacob.jpeg"
-import kirilImg from "../../assets/contact/kiril.jpeg"
-import tylerImg from "../../assets/contact/tyler.jpeg"
-import unknownImg from "../../assets/contact/unknown.jpeg"
+import michaelImg from "../../assets/contact/michael.webp"
+import curtisImg from "../../assets/contact/curtis.webp"
+import ethanmImg from "../../assets/contact/ethan_m.webp"
+import ibrahimImg from "../../assets/contact/ibrahim.webp"
+import jacobImg from "../../assets/contact/jacob.webp"
+import kirilImg from "../../assets/contact/kiril.webp"
+import tylerImg from "../../assets/contact/tyler.webp"
+import unknownImg from "../../assets/contact/unknown.webp"
 
 export interface TeamPerson {
   id: string;
