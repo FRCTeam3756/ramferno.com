@@ -9,9 +9,16 @@
   object-fit: cover;
   object-position: 50%;
 
-  z-index: -1;
+  z-index: 0;
 
-  filter: contrast(1.05) saturate(1.05) brightness(0.65);
+  filter: url("#hero-color-grade") saturate(1.08) contrast(1.06) brightness(0.8);
+}
+
+.colorFilter {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 .hero {
@@ -43,7 +50,10 @@
 }
 
 .heroText {
+  position: relative;
+  z-index: 2;
   text-align: center;
+  text-shadow: 0 2px 24px rgb(4 12 30 / 55%);
 }
 
 .heroText h1 {
@@ -94,6 +104,12 @@
 @media (min-width: 480px) and (max-width: 991.98px) {
   .heroText h1 {
     font-size: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    padding-top: 200px;
   }
 }
 
