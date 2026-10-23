@@ -11,7 +11,7 @@
 
   z-index: 0;
 
-  filter: url("#hero-color-grade") saturate(1.08) contrast(1.06) brightness(0.8);
+  filter: url("#hero-color-grade") saturate(1.08) contrast(1.06);
 }
 
 .colorFilter {
