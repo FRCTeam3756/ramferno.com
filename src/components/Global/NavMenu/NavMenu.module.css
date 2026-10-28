@@ -56,14 +56,18 @@
   z-index: 100;
 }
 
-.navMenuHeader::before {
+.navMenuWrapper::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  /* Keep the header blur behind every sliding menu layer. */
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 
 .navMenuHeader>* {
@@ -178,8 +182,6 @@
   width: 500px;
   height: 100%;
   background: white;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
   padding: 6em 2em 2em 2em;
