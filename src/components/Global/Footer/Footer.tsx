@@ -56,7 +56,10 @@ export default function Footer() {
         <div className={styles.bottomRow}>
           <div className={styles.copyright}>
             <p>&copy; {year} RamFerno Robotics</p>
-            <p>All rights reserved</p>
+            <p>
+              Website by{" "}
+              <a href="https://www.gabelynch.com">Gabe Lynch</a>
+            </p>
           </div>
           <nav className={styles.navigation} aria-label="Footer navigation">
             {pages.map((label) => (
